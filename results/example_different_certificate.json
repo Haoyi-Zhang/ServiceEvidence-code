@@ -1,0 +1,19 @@
+{
+  "cell": {
+    "epoch": 1,
+    "left": "h00000-2",
+    "reason": "incompatible redirect destinations",
+    "right": "h00003-2",
+    "source": "v2",
+    "vote": "different"
+  },
+  "kind": "different",
+  "query": [
+    "h00000-2",
+    "h00003-2"
+  ],
+  "separator_pair": [
+    "h00000-2",
+    "h00003-2"
+  ]
+}

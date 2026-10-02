@@ -1,0 +1,4 @@
+seed,services,input_cells,processes,sources,partition_groups,partition_ambiguous,abrupt_crashes,successful_restarts,heal_rounds,final_cells,final_kind,final_states_equal,expected_state_equal,certificates_verified,orchestrator_requests,final_snapshot_bytes,elapsed_seconds
+1,100,2200,4,5,2,4,2,2,1,2200,same,1,1,10,36,1067392,6.716286668999942
+2,100,2200,4,5,2,4,2,2,1,2200,same,1,1,10,36,1067392,6.728443267999978
+3,100,2200,4,5,2,4,2,2,1,2200,same,1,1,10,36,1067392,6.095171805999939

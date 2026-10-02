@@ -1,0 +1,21 @@
+{
+  "final-current": {
+    "independently_reaggregatable": true,
+    "raw_records": 600,
+    "raw_source": "results/tpds/materializer_raw.csv",
+    "summary_source": "results/tpds/materializer_summary.csv"
+  },
+  "retained-clean": {
+    "independently_reaggregatable": true,
+    "raw_records": 600,
+    "raw_source": "results/reproduction.json:timing_replication.clean_raw_timings",
+    "summary_source": "independently regenerated from clean_raw_timings"
+  },
+  "summary-only-primary": {
+    "independently_reaggregatable": false,
+    "interpretation": "The 3.03-fold sparse-cut value survives only as an aggregate summary. It cannot be independently recomputed and is not counted as a complete raw-retained execution.",
+    "raw_records": 0,
+    "raw_source": null,
+    "summary_source": "results/reproduction.json:timing_replication.primary_summary"
+  }
+}

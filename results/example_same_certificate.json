@@ -1,0 +1,64 @@
+{
+  "kind": "same",
+  "path": [
+    "h00001-0",
+    "h00001-1",
+    "h00001-2"
+  ],
+  "query": [
+    "h00001-0",
+    "h00001-2"
+  ],
+  "support": [
+    {
+      "cells": [
+        {
+          "epoch": 1,
+          "left": "h00001-0",
+          "reason": "redirect-and-asset continuity",
+          "right": "h00001-1",
+          "source": "v0",
+          "vote": "same"
+        },
+        {
+          "epoch": 1,
+          "left": "h00001-0",
+          "reason": "redirect-and-asset continuity",
+          "right": "h00001-1",
+          "source": "v1",
+          "vote": "same"
+        }
+      ],
+      "epoch": 1,
+      "pair": [
+        "h00001-0",
+        "h00001-1"
+      ]
+    },
+    {
+      "cells": [
+        {
+          "epoch": 1,
+          "left": "h00001-1",
+          "reason": "redirect-and-asset continuity",
+          "right": "h00001-2",
+          "source": "v0",
+          "vote": "same"
+        },
+        {
+          "epoch": 1,
+          "left": "h00001-1",
+          "reason": "redirect-and-asset continuity",
+          "right": "h00001-2",
+          "source": "v1",
+          "vote": "same"
+        }
+      ],
+      "epoch": 1,
+      "pair": [
+        "h00001-1",
+        "h00001-2"
+      ]
+    }
+  ]
+}

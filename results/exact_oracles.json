@@ -1,0 +1,41 @@
+{
+  "graph": {
+    "labelled_graphs": 729,
+    "queries": 4374,
+    "kinds": {
+      "same": 1402,
+      "different": 2329,
+      "ambiguous": 643
+    },
+    "global_compatibility": {
+      "ambiguous_queries": 643,
+      "old_local_choice_globally_invalid": 0,
+      "global_cost_exceeds_local": 0,
+      "maximum_cost_increase": 0,
+      "total_cost_increase": 0
+    }
+  },
+  "compatibility": {
+    "labelled_quotient_graphs": 4096,
+    "query_cases": 18432,
+    "old_local_choice_globally_invalid": 144,
+    "global_cost_exceeds_local": 144,
+    "cost_increase_1": 108,
+    "cost_increase_2": 36,
+    "maximum_cost_increase": 2
+  },
+  "gap": {
+    "partial_vectors": 64,
+    "threshold_cases": 192,
+    "completions_per_case": 27
+  },
+  "floors": {
+    "admissible_states": 21,
+    "triples": 9261,
+    "pairs": 441
+  },
+  "global_path_regression_confirmed": true,
+  "elapsed_seconds": 2.742415507999908,
+  "cpu_seconds": 3.853857288,
+  "peak_rss_mib": 93.671875
+}

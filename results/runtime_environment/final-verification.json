@@ -1,0 +1,44 @@
+{
+  "container_or_virtualization": "container-other",
+  "context": "final-verification",
+  "cpu": {
+    "affinity_cpu_count": 5,
+    "affinity_cpu_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cgroup_cpu_max": "400000 100000",
+    "cgroup_cpuset": "0-4",
+    "logical_cores_visible": 5,
+    "model": "INTEL(R) XEON(R) PLATINUM 8573C"
+  },
+  "memory": {
+    "cgroup_memory_max": "4294967296",
+    "host_visible_total_bytes": 6236913664,
+    "rlimit_address_space_hard": null,
+    "rlimit_address_space_soft": null
+  },
+  "os": {
+    "distribution": "Debian GNU/Linux 13 (trixie)",
+    "machine": "x86_64",
+    "release": "6.18.44",
+    "system": "Linux"
+  },
+  "persistence": {
+    "filesystem_type": "overlay",
+    "mount_options": "rw,relatime,fsync=volatile",
+    "mount_source": "overlay",
+    "path_role": "artifact results directory",
+    "persistence_medium": "unknown"
+  },
+  "python": {
+    "executable_basename": "python",
+    "implementation": "CPython",
+    "version": "3.13.5"
+  },
+  "schema": 1,
+  "scope_note": "This record describes the execution that creates it. It does not retroactively identify hardware or software for retained historical timings."
+}

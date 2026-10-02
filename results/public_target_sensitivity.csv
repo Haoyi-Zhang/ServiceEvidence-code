@@ -1,0 +1,4 @@
+header_conflict_threshold,pairs,true_same,true_different,predicted_same,predicted_different,predicted_unknown,false_same,false_different,coverage,asserted_error_rate,same_precision,same_recall,different_precision,different_recall
+0.1,276,16,260,3,11,262,0,0,0.050724637681159424,0.0,1.0,0.1875,1.0,0.04230769230769231
+0.25,276,16,260,3,17,256,0,0,0.07246376811594203,0.0,1.0,0.1875,1.0,0.06538461538461539
+0.5,276,16,260,3,21,252,0,0,0.08695652173913043,0.0,1.0,0.1875,1.0,0.08076923076923077

@@ -1,0 +1,7 @@
+dataset_record,site,step,request_url,status,redirect_url,server_ip,observed_at,source_url
+web-measurement-tools-sample,debian.org,0,http://debian.org/,301,https://www.debian.org/,5.153.231.4,2018-10-13T23:03:51+02:00,https://github.com/renghardt/web-measurement-tools/tree/master/testdata/run-2018-10-13T23:03-test_success_urls/har
+web-measurement-tools-sample,debian.org,1,https://www.debian.org/,200,,5.153.231.4,2018-10-13T23:03:51+02:00,https://github.com/renghardt/web-measurement-tools/tree/master/testdata/run-2018-10-13T23:03-test_success_urls/har
+web-measurement-tools-sample,google.com,0,http://google.com/,301,http://www.google.com/,173.194.79.139,2018-10-13T23:03:58+02:00,https://github.com/renghardt/web-measurement-tools/tree/master/testdata/run-2018-10-13T23:03-test_success_urls/har
+web-measurement-tools-sample,google.com,1,http://www.google.com/,302,https://www.google.com/?gws_rd=ssl,216.58.213.196,2018-10-13T23:03:59+02:00,https://github.com/renghardt/web-measurement-tools/tree/master/testdata/run-2018-10-13T23:03-test_success_urls/har
+web-measurement-tools-sample,google.com,2,https://www.google.com/?gws_rd=ssl,200,,216.58.213.196,2018-10-13T23:03:59+02:00,https://github.com/renghardt/web-measurement-tools/tree/master/testdata/run-2018-10-13T23:03-test_success_urls/har
+web-measurement-tools-sample,maunz.org,0,http://maunz.org/,200,,31.15.66.34,2018-10-13T23:04:07+02:00,https://github.com/renghardt/web-measurement-tools/tree/master/testdata/run-2018-10-13T23:03-test_success_urls/har

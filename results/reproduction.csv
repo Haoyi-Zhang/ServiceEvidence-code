@@ -1,0 +1,4 @@
+name,command,exit_code,wall_seconds,cpu_seconds
+core-wrapper,bash scripts/reproduce.sh,0,77.14197462799984,77.065864
+extended-wrapper,bash scripts/reproduce_extended.sh,0,57.846922723000034,57.62953999999999
+check-wrapper,bash scripts/check_all.sh,0,4.041318101000115,3.9933089999999822

@@ -1,0 +1,248 @@
+{
+  "state": {
+    "node_id": "fixture",
+    "sources": [
+      "v0",
+      "v1",
+      "v2",
+      "v3",
+      "v4"
+    ],
+    "threshold": 2,
+    "handles": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "stable_floors": [],
+    "cells": [
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "v0",
+        "vote": "same",
+        "reason": "path"
+      },
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "v1",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "v2",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "v3",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "v4",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "v0",
+        "vote": "same",
+        "reason": "path"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "v1",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "v2",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "v3",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "v4",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "b",
+        "right": "d",
+        "epoch": 0,
+        "source": "v0",
+        "vote": "different",
+        "reason": "separator"
+      },
+      {
+        "left": "b",
+        "right": "d",
+        "epoch": 0,
+        "source": "v1",
+        "vote": "unknown",
+        "reason": "separator"
+      },
+      {
+        "left": "b",
+        "right": "d",
+        "epoch": 0,
+        "source": "v2",
+        "vote": "unknown",
+        "reason": "separator"
+      },
+      {
+        "left": "b",
+        "right": "d",
+        "epoch": 0,
+        "source": "v3",
+        "vote": "unknown",
+        "reason": "separator"
+      },
+      {
+        "left": "b",
+        "right": "d",
+        "epoch": 0,
+        "source": "v4",
+        "vote": "unknown",
+        "reason": "separator"
+      },
+      {
+        "left": "c",
+        "right": "d",
+        "epoch": 0,
+        "source": "v0",
+        "vote": "same",
+        "reason": "path"
+      },
+      {
+        "left": "c",
+        "right": "d",
+        "epoch": 0,
+        "source": "v1",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "c",
+        "right": "d",
+        "epoch": 0,
+        "source": "v2",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "c",
+        "right": "d",
+        "epoch": 0,
+        "source": "v3",
+        "vote": "unknown",
+        "reason": "path"
+      },
+      {
+        "left": "c",
+        "right": "d",
+        "epoch": 0,
+        "source": "v4",
+        "vote": "unknown",
+        "reason": "path"
+      }
+    ]
+  },
+  "certificate": {
+    "kind": "ambiguous",
+    "query": [
+      "a",
+      "d"
+    ],
+    "globally_sufficient": true,
+    "authorization_gap": 5,
+    "edge_count": 1,
+    "component_path": [
+      0,
+      3
+    ],
+    "steps": [
+      {
+        "pair": [
+          "a",
+          "d"
+        ],
+        "from_component": 0,
+        "to_component": 3,
+        "observed": false,
+        "epoch": null,
+        "sealed": false,
+        "same_sources": [],
+        "missing_sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "different_sources": [],
+        "unknown_sources": [],
+        "authorization_gap": 5,
+        "gap_sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ]
+      }
+    ]
+  },
+  "conflict": [
+    "b",
+    "d"
+  ],
+  "rejected_local_path": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "b",
+      "c"
+    ],
+    [
+      "c",
+      "d"
+    ]
+  ],
+  "rejected_local_gap": 3,
+  "global_authorization_gap": 5,
+  "globally_sufficient_plan": true
+}

@@ -1,0 +1,4 @@
+site,navigation_entries,redirect_edges,distinct_authorities,distinct_endpoints,authority_changes,endpoint_changes,terminal_status
+debian.org,2,1,2,1,1,0,200
+google.com,3,2,2,2,1,1,200
+maunz.org,1,0,1,1,0,0,200

@@ -1,0 +1,6331 @@
+{
+  "clean_extraction": true,
+  "result_surfaces_deleted_before_initial_regeneration": true,
+  "unit_tests": 55,
+  "result_file_count": 88,
+  "commands": [
+    {
+      "name": "core-wrapper",
+      "command": "bash scripts/reproduce.sh",
+      "exit_code": 0,
+      "wall_seconds": 77.14197462799984,
+      "cpu_seconds": 77.065864
+    },
+    {
+      "name": "extended-wrapper",
+      "command": "bash scripts/reproduce_extended.sh",
+      "exit_code": 0,
+      "wall_seconds": 57.846922723000034,
+      "cpu_seconds": 57.62953999999999
+    },
+    {
+      "name": "check-wrapper",
+      "command": "bash scripts/check_all.sh",
+      "exit_code": 0,
+      "wall_seconds": 4.041318101000115,
+      "cpu_seconds": 3.9933089999999822
+    }
+  ],
+  "all_recorded_wrapper_exit_codes_zero": true,
+  "comparison": {
+    "compared_files": 88,
+    "missing_files": [],
+    "different_stable_files": [],
+    "excluded_measurement_fields": [
+      "centralized_seconds",
+      "certificate_generation_median_ms",
+      "certificate_ms_median",
+      "certificate_ms_p95",
+      "certificate_seconds",
+      "certificate_verification_ms",
+      "certificate_verification_ms_median",
+      "certificate_verification_ms_range",
+      "compaction_seconds",
+      "cpu_seconds",
+      "elapsed_seconds",
+      "elapsed_seconds_median",
+      "elapsed_seconds_range",
+      "emulation_seconds",
+      "generation_ms",
+      "generation_ms_median",
+      "generation_ms_p95",
+      "generation_seconds",
+      "indexed_median_ms",
+      "indexed_seconds",
+      "materialization_seconds",
+      "median_generation_ms",
+      "median_verification_ms",
+      "paired_speedup_max",
+      "paired_speedup_median",
+      "paired_speedup_min",
+      "peak_rss_mib",
+      "reference_median_ms",
+      "reference_over_indexed",
+      "reference_seconds",
+      "rpc_median_ms",
+      "rpc_p95_ms",
+      "rpc_p95_ms_median",
+      "rpc_p95_ms_range",
+      "seconds",
+      "total_seconds",
+      "verification_ms",
+      "verification_ms_median",
+      "verification_ms_p95"
+    ],
+    "stable_results_equal": true
+  },
+  "timing_replication": {
+    "primary_selection": "first retained paired execution, not best execution",
+    "primary_summary": [
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "cases": "5",
+        "reference_median_ms": "2.00437",
+        "indexed_median_ms": "1.55357",
+        "paired_speedup_median": "1.3186782226487346",
+        "paired_speedup_min": "1.2694444194358665",
+        "paired_speedup_max": "1.4286093548673249"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "cases": "5",
+        "reference_median_ms": "4.419239999999999",
+        "indexed_median_ms": "3.079848",
+        "paired_speedup_median": "1.4690741231385445",
+        "paired_speedup_min": "1.3960629809310017",
+        "paired_speedup_max": "1.5893654172791738"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "cases": "5",
+        "reference_median_ms": "12.094307",
+        "indexed_median_ms": "6.662594",
+        "paired_speedup_median": "1.8295687686418451",
+        "paired_speedup_min": "1.7303762020508457",
+        "paired_speedup_max": "1.8568700118902637"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "cases": "5",
+        "reference_median_ms": "43.619057000000005",
+        "indexed_median_ms": "14.501141",
+        "paired_speedup_median": "3.028502630660635",
+        "paired_speedup_min": "2.835669134613962",
+        "paired_speedup_max": "3.213038712327077"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "cases": "5",
+        "reference_median_ms": "2.663659",
+        "indexed_median_ms": "2.714724",
+        "paired_speedup_median": "0.9832549360194422",
+        "paired_speedup_min": "0.9572633056073298",
+        "paired_speedup_max": "1.017024715901964"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "cases": "5",
+        "reference_median_ms": "6.321796",
+        "indexed_median_ms": "6.222829",
+        "paired_speedup_median": "1.0474220744288643",
+        "paired_speedup_min": "0.9630447712642377",
+        "paired_speedup_max": "1.1057456343409082"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "cases": "5",
+        "reference_median_ms": "12.202886",
+        "indexed_median_ms": "12.219771000000001",
+        "paired_speedup_median": "0.998427220935646",
+        "paired_speedup_min": "0.9614075223186511",
+        "paired_speedup_max": "1.050395781392223"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "cases": "5",
+        "reference_median_ms": "29.184661000000002",
+        "indexed_median_ms": "32.879774",
+        "paired_speedup_median": "0.9632953449356382",
+        "paired_speedup_min": "0.8647003169790645",
+        "paired_speedup_max": "1.3382969276362822"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "cases": "5",
+        "reference_median_ms": "0.603917",
+        "indexed_median_ms": "0.5891759999999999",
+        "paired_speedup_median": "1.0186010022987468",
+        "paired_speedup_min": "0.965191917808627",
+        "paired_speedup_max": "1.0532038069291847"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "cases": "5",
+        "reference_median_ms": "1.207094",
+        "indexed_median_ms": "1.2104590000000002",
+        "paired_speedup_median": "1.0153180113387086",
+        "paired_speedup_min": "0.8537627465839477",
+        "paired_speedup_max": "1.037736098455214"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "cases": "5",
+        "reference_median_ms": "2.506846",
+        "indexed_median_ms": "2.46906",
+        "paired_speedup_median": "1.0175265080637976",
+        "paired_speedup_min": "0.997175358112164",
+        "paired_speedup_max": "1.051653603804599"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "cases": "5",
+        "reference_median_ms": "5.399146",
+        "indexed_median_ms": "5.462189",
+        "paired_speedup_median": "0.9863352689266571",
+        "paired_speedup_min": "0.9502922798179327",
+        "paired_speedup_max": "1.0847312313799469"
+      }
+    ],
+    "clean_summary": [
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "cases": "5",
+        "reference_median_ms": "1.825814",
+        "indexed_median_ms": "1.4799200000000001",
+        "paired_speedup_median": "1.25543020056798",
+        "paired_speedup_min": "1.2313833769239795",
+        "paired_speedup_max": "1.2889973552944327"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "cases": "5",
+        "reference_median_ms": "4.0066060000000006",
+        "indexed_median_ms": "2.991737",
+        "paired_speedup_median": "1.3360071218300844",
+        "paired_speedup_min": "1.2780505129317314",
+        "paired_speedup_max": "1.4244718035041182"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "cases": "5",
+        "reference_median_ms": "10.516034000000001",
+        "indexed_median_ms": "6.400684999999999",
+        "paired_speedup_median": "1.6354682469813884",
+        "paired_speedup_min": "1.5881704536837498",
+        "paired_speedup_max": "1.680228175398893"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "cases": "5",
+        "reference_median_ms": "31.507599999999996",
+        "indexed_median_ms": "14.468289",
+        "paired_speedup_median": "2.3159902604860565",
+        "paired_speedup_min": "2.135207960496999",
+        "paired_speedup_max": "2.359524681874961"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "cases": "5",
+        "reference_median_ms": "2.6684270000000003",
+        "indexed_median_ms": "2.5558400000000003",
+        "paired_speedup_median": "1.0488313039939903",
+        "paired_speedup_min": "1.025940283882941",
+        "paired_speedup_max": "1.1253383280957336"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "cases": "5",
+        "reference_median_ms": "5.695587000000001",
+        "indexed_median_ms": "5.592173",
+        "paired_speedup_median": "1.018492632470419",
+        "paired_speedup_min": "0.9666485325202455",
+        "paired_speedup_max": "1.1164373886218322"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "cases": "5",
+        "reference_median_ms": "11.882685",
+        "indexed_median_ms": "11.705191000000001",
+        "paired_speedup_median": "1.0077785810291402",
+        "paired_speedup_min": "0.828146141612525",
+        "paired_speedup_max": "1.095236682056953"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "cases": "5",
+        "reference_median_ms": "26.039548",
+        "indexed_median_ms": "26.310051",
+        "paired_speedup_median": "0.9874975237903267",
+        "paired_speedup_min": "0.9694348890851148",
+        "paired_speedup_max": "1.0783047792580225"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "cases": "5",
+        "reference_median_ms": "0.633412",
+        "indexed_median_ms": "0.604919",
+        "paired_speedup_median": "1.046036155562081",
+        "paired_speedup_min": "0.8908704041243717",
+        "paired_speedup_max": "1.114879326367963"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "cases": "5",
+        "reference_median_ms": "1.1867539999999999",
+        "indexed_median_ms": "1.169008",
+        "paired_speedup_median": "1.0233602146828737",
+        "paired_speedup_min": "1.004035045098066",
+        "paired_speedup_max": "1.4404125359636595"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "cases": "5",
+        "reference_median_ms": "2.498414",
+        "indexed_median_ms": "2.4911730000000003",
+        "paired_speedup_median": "1.0284069906915363",
+        "paired_speedup_min": "0.9746003188056389",
+        "paired_speedup_max": "1.102442094692313"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "cases": "5",
+        "reference_median_ms": "5.222532999999999",
+        "indexed_median_ms": "5.270135",
+        "paired_speedup_median": "0.9783959504476072",
+        "paired_speedup_min": "0.9024916449510966",
+        "paired_speedup_max": "1.1101730759077477"
+      }
+    ],
+    "clean_raw_timings": [
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001879203",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001482734",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001566969",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001825814",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001835579",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001434914",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001447522",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001816981",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001786967",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001483836",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001487791",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001811864",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00180327",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001434202",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001437267",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.00177584",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001826976",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001444337",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001790041",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001816981",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002095926",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.00147992",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00155402",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001849369",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.0018094",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001437837",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001471488",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002912861",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001871783",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001797712",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001575112",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001923309",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001953785",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001430356",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001531076",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001965542",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001924812",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.00149355",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001456475",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001925182",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001858713",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001448763",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001445089",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001810712",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001831192",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001442304",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001436485",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001808398",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001793938",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001424607",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.003983663",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002980441",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002973461",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.003982941",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00393491",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003124145",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003137985",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004104231",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004079384",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003116984",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003188129",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004445449",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004481533",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003107389",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003116053",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004163069",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004069611",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003130193",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003024156",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004075459",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004342977",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003057585",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003164435",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004261645",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004209117",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002967291",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002960981",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004315325",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.003990112",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002991737",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003045568",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004144962",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004006606",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003265314",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002950987",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.003989962",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004381494",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002962865",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002934834",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004000527",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.004743923",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003057095",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002972659",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.003966817",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.003948971",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002933982",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002959119",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.004288596",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.003950223",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003203012",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010516034",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006426584",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.007589703",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010624304",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010543484",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006250763",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006258694",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010111673",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010357197",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.0061819",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006501445",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010726486",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010291239",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.00643734",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00639046",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010589893",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010134175",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006188289",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006377771",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010570144",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010742761",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006822432",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006772719",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010389715",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010162158",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006335479",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006382409",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010315435",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010785994",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006400685",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006377351",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010454371",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.01103898",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006345113",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006501996",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010633808",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010300473",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006631097",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006545411",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010797371",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010707517",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006254578",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006693571",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010588741",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010388134",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.007012956",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006540944",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.010333201",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010216918",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006206606",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.032387147",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.014850577",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014511092",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.030618548",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.03121175",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.013608521",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.013001759",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.035403261",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.03100399",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.014518874",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.01492616",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.031341823",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.030924062",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.014678581",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014632853",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.032878407",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.031151179",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.015973126",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014346417",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.031400941",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.031632074",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.014308191",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.013626457",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.034138285",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.035801343",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.016412379",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014468289",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.032922443",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.034197077",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.016040686",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014934091",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.049208504",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.036914508",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.013255556",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.01343973",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.030944593",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.0315076",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.013604375",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.016131231",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.030955879",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.032930124",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.014138798",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.018818466",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.03351905",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.032568927",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.016742409",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014134753",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.031867925",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.033578718",
+        "view_equal": "True"
+      },
+      {
+        "family": "sparse_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.013762909",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.003161049",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002738961",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002780794",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002682648",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002600776",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002499957",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002465305",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002927422",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002880883",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002560015",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002565584",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002820233",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002668427",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002513086",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002504302",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002541759",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002570442",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002700364",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002540006",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002715837",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002859681",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002552185",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002759352",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002680645",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002577091",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.00255584",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002569199",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002776478",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002673194",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002550642",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002651321",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.003012599",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002775717",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002567057",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002527798",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002652593",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002647916",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002571943",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.003003094",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002636029",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002680836",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002513777",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00250279",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002544402",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00256945",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002498714",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002504483",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002557512",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002672884",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002544142",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005390013",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005568579",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005436622",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005419426",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005959039",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006510138",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005663349",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005474468",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005484573",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005686764",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005331526",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005807583",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005479777",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005907152",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005311456",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005430402",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005545945",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005904998",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005481178",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005426407",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005505745",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.022138211",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.024916231",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.044717828",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.006611198",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005557081",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.0054754",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.006204133",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.006182951",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005369733",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00590572",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.006236701",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005719823",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.00593318",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005705372",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005597361",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.006036614",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005505415",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.008780818",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.006641563",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.006214379",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005621276",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005592173",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005507628",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00553609",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005369021",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005831259",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005819522",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005695587",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005350553",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.010982787",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011921422",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.011059902",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.011102865",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011282403",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011783838",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.01148889",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.01117322",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011311846",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011705191",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.010992962",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.01163054",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011174422",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.01128066",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.011067042",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.011364865",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.01195349",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.012098045",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.013023881",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.0135008",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.012621674",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011524152",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.011174513",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.011117117",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011669108",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011019382",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.012421436",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.013373721",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.016728428",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.030326834",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.014320519",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.012707461",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011525574",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011924537",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.011223826",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.011882685",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011313759",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.011790968",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.011033363",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.01204771",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.011622858",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.03325733",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.024015835",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.012156321",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.0122839",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.012511239",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.01313811",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.01716021",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.01362238",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.01483301",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.025103497",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.025666064",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.030318559",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.027126485",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.026966907",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.028036938",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.023905486",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.029516092",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.026712649",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.027817141",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.026310051",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.025640695",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.025600406",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.02548205",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.023862572",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.024094348",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.024604645",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.0342334",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.039697121",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.03163479",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.028827393",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.027797732",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.025916626",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.025622288",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.025592604",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.025336313",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.033861917",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.025330244",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.024426871",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.023741532",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.02423762",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.030033886",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.036244669",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.027603333",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.02637627",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.028441658",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.026384221",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.025796287",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.027461042",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.027051973",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.026892206",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.029221399",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.026349909",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.02912835",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.025411635",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.024212432",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.025255563",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.025602159",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.026039548",
+        "view_equal": "True"
+      },
+      {
+        "family": "dense_cut",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.02578429",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001873465",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000606461",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000604919",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000704537",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000610277",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000838837",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00058507",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000640422",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000668404",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.00055818",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000584889",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000556117",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000575025",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000543348",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000562466",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000545161",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000569286",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000560443",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000544309",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000559912",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000584068",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000559141",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000541705",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000673501",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000566702",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000675775",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000655615",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000561835",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000587744",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000718147",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000616376",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000680412",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000912066",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000858166",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000650467",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000687913",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000678158",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000573943",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000661273",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000610848",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000633412",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000568144",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.000550589",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.00056508",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000549848",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000560703",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00057214",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.000657537",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.000808802",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "64",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.000596277",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001186754",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001300864",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001146895",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001186754",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001351539",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001154807",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001159664",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001234946",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001156079",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001274734",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001337979",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001543454",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001173725",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001232552",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001169008",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.00127147",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001157861",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001165492",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001141267",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001156509",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001160815",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001129739",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00137962",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001208366",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001343447",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001167906",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001132023",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001147455",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001145182",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001144401",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001200865",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001165683",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001294644",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001335335",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001180124",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001747177",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001729741",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001157661",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00171528",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.00178261",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.001297759",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001410737",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001592727",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001174787",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00137899",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001183339",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.001154326",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.001295386",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00121756",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "128",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.001162889",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002640956",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002504584",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002480548",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002878119",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.003409669",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.003046088",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002952379",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002443662",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00243499",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002492065",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002381921",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002781074",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002423994",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.0023345",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002473487",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002416933",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002351015",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002528118",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002481329",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002605824",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002580656",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002620165",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002429402",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002409893",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002365696",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002570792",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.0023412",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002498414",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002664061",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002348591",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002413398",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002436371",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002409942",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002353008",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002659042",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002639563",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002427898",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002554127",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002491173",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002420108",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002964387",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002641386",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002545233",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002965969",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002701426",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002481799",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.002589219",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.002386578",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.002805972",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "256",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.002519495",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005265387",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005234421",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005288261",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005120122",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005147753",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005261421",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005074383",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005109605",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005515349",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "1",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006282339",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005237405",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005120822",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005326788",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006113257",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005996054",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005222533",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005067643",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005070388",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005270135",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "2",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005649198",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.006064275",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005465595",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005346068",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005773052",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.00509263",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005623119",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.00543538",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005115114",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005210145",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "3",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005524673",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005251547",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.007058833",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005207531",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005170737",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005733653",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005740413",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.006122952",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005153962",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005130106",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "4",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005274611",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005237025",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "0",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005998768",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.005421108",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "1",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005743658",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005302903",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "2",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.006183432",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "indexed",
+        "order": "0",
+        "seconds": "0.006406854",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "3",
+        "implementation": "reference",
+        "order": "1",
+        "seconds": "0.005883917",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "reference",
+        "order": "0",
+        "seconds": "0.005413838",
+        "view_equal": "True"
+      },
+      {
+        "family": "low_conflict",
+        "handles": "512",
+        "seed": "5",
+        "repetition": "4",
+        "implementation": "indexed",
+        "order": "1",
+        "seconds": "0.005245758",
+        "view_equal": "True"
+      }
+    ],
+    "scope": "Same case definitions and exact view predicates; time ratios are measurements, not deterministic fields or pass gates."
+  },
+  "execution_note": "Two foreground wrapper attempts were interrupted by the tool execution boundary after the correctness stage. Individual stages succeeded, then complete core, extended, and check wrappers completed under a local process driver with recorded exit codes. No failed attempt was counted as a passed wrapper.",
+  "known_clean_wrapper_cpu_seconds": 138.68871299999998,
+  "historical_cumulative_cpu_seconds": null,
+  "uncertainty_note": "No population binomial interval is inferred from dependent public fixture pairs. Clean reproduction validates stable fields, not exact elapsed time, speedup, latency or resident memory."
+}

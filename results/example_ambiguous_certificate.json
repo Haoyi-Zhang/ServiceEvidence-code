@@ -1,0 +1,42 @@
+{
+  "authorization_gap": 1,
+  "component_path": [
+    0,
+    1
+  ],
+  "edge_count": 1,
+  "globally_sufficient": true,
+  "kind": "ambiguous",
+  "query": [
+    "h00000-0",
+    "h00000-2"
+  ],
+  "steps": [
+    {
+      "authorization_gap": 1,
+      "different_sources": [],
+      "epoch": 1,
+      "from_component": 0,
+      "gap_sources": [
+        "v1"
+      ],
+      "missing_sources": [],
+      "observed": true,
+      "pair": [
+        "h00000-1",
+        "h00000-2"
+      ],
+      "same_sources": [
+        "v0"
+      ],
+      "sealed": true,
+      "to_component": 1,
+      "unknown_sources": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ]
+    }
+  ]
+}

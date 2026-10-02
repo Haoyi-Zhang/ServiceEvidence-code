@@ -1,0 +1,43 @@
+{
+  "sites": 5,
+  "nonconnected_partitions": 51,
+  "placement_cases": 2550,
+  "query_checks": 12750,
+  "central_gt_quorum": 940,
+  "quorum_gt_central": 510,
+  "equal": 1100,
+  "central_mean": "107/255",
+  "quorum_mean": "92/255",
+  "strata": [
+    {
+      "components": 2,
+      "placements": 750,
+      "central_mean": "43/75",
+      "quorum_mean": "47/75",
+      "peer_mean": "1"
+    },
+    {
+      "components": 3,
+      "placements": 1250,
+      "central_mean": "49/125",
+      "quorum_mean": "39/125",
+      "peer_mean": "1"
+    },
+    {
+      "components": 4,
+      "placements": 500,
+      "central_mean": "7/25",
+      "quorum_mean": "3/25",
+      "peer_mean": "1"
+    },
+    {
+      "components": 5,
+      "placements": 50,
+      "central_mean": "1/5",
+      "quorum_mean": "0",
+      "peer_mean": "1"
+    }
+  ],
+  "scope": "combinatorial response reachability, not network measurements or decisive authorization",
+  "distribution": "uniform over 51 partitions, 5 central placements, 10 quorum placements"
+}

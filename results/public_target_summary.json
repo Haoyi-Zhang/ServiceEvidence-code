@@ -1,0 +1,90 @@
+{
+  "countries": 10,
+  "excluded_upstream_fixtures": 4,
+  "inspected_upstream_fixtures": 16,
+  "label_scope": "exact normalized input-target equality; not service ownership or operator identity",
+  "leave_one_case_out": {
+    "asserted_error_rate_range": [
+      0.0,
+      0.0
+    ],
+    "coverage_range": [
+      0.04329004329004329,
+      0.08658008658008658
+    ],
+    "false_different_range": [
+      0,
+      0
+    ],
+    "false_same_range": [
+      0,
+      0
+    ],
+    "folds": 12
+  },
+  "leave_one_target_out": {
+    "asserted_error_rate_range": [
+      0.0,
+      0.0
+    ],
+    "coverage_range": [
+      0.04329004329004329,
+      0.09473684210526316
+    ],
+    "false_different_range": [
+      0,
+      0
+    ],
+    "false_same_range": [
+      0,
+      0
+    ],
+    "folds": 11
+  },
+  "observations": 24,
+  "pair_labels": {
+    "different": 260,
+    "same": 16
+  },
+  "predicates": [
+    {
+      "asserted_error_rate": 0.0,
+      "coverage": 0.07246376811594203,
+      "different_precision": 1.0,
+      "different_recall": 0.06538461538461539,
+      "false_different": 0,
+      "false_same": 0,
+      "pairs": 276,
+      "predicate": "conservative-two-signal",
+      "predicted_different": 17,
+      "predicted_same": 3,
+      "predicted_unknown": 256,
+      "same_precision": 1.0,
+      "same_recall": 0.1875,
+      "true_different": 260,
+      "true_same": 16
+    },
+    {
+      "asserted_error_rate": 0.03260869565217391,
+      "coverage": 1.0,
+      "different_precision": 0.9735849056603774,
+      "different_recall": 0.9923076923076923,
+      "false_different": 7,
+      "false_same": 2,
+      "pairs": 276,
+      "predicate": "closed-world-endpoint-negative-control",
+      "predicted_different": 265,
+      "predicted_same": 11,
+      "predicted_unknown": 0,
+      "same_precision": 0.8181818181818182,
+      "same_recall": 0.5625,
+      "true_different": 260,
+      "true_same": 16
+    }
+  ],
+  "probe_asns": 10,
+  "records": 12,
+  "sampling_scope": "frozen set of 16 inspected upstream Web Connectivity fixture candidates; 12 unique extractable records retained after identity deduplication; not a representative Web sample",
+  "targets": 11,
+  "uncertainty_scope": "no independent-pair confidence intervals: pairs share observations and the fixtures are not a probability sample; target-block and case-block leave-one-out ranges are finite-family sensitivity checks, not population confidence intervals"
+}

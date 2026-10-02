@@ -1,0 +1,22 @@
+{
+  "abrupt_crashes": 6,
+  "all_expected_states_equal": true,
+  "all_final_same": true,
+  "all_final_states_equal": true,
+  "all_partition_answers_ambiguous": true,
+  "cases": 3,
+  "certificates_verified": 30,
+  "crash_boundary": "SIGKILL after acknowledged commits; no mid-write or power-loss injection",
+  "elapsed_seconds_range": [
+    6.095171805999939,
+    6.728443267999978
+  ],
+  "heal_rounds_range": [
+    1,
+    1
+  ],
+  "input_cells_per_case": 2200,
+  "processes_per_case": 4,
+  "services_per_case": 100,
+  "successful_restarts": 6
+}

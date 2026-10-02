@@ -1,0 +1,10 @@
+execution,evidence_level,raw_records,independently_reaggregatable,family,handles,cases,reference_median_ms,indexed_median_ms,paired_speedup_median,paired_speedup_min,paired_speedup_max
+summary-only-primary,summary-only; per-call records unavailable,0,false,sparse_cut,512,5,43.619057000000005,14.501141,3.028502630660635,2.835669134613962,3.213038712327077
+summary-only-primary,summary-only; per-call records unavailable,0,false,dense_cut,512,5,29.184661000000002,32.879774,0.9632953449356382,0.8647003169790645,1.3382969276362822
+summary-only-primary,summary-only; per-call records unavailable,0,false,low_conflict,512,5,5.399146,5.462189,0.9863352689266571,0.9502922798179327,1.0847312313799469
+retained-clean,per-call raw timings retained in reproduction.json,600,true,dense_cut,512,5,26.039548,26.310051,0.9874975237903267,0.9694348890851148,1.0783047792580225
+retained-clean,per-call raw timings retained in reproduction.json,600,true,low_conflict,512,5,5.222532999999999,5.270135,0.9783959504476072,0.9024916449510966,1.1101730759077477
+retained-clean,per-call raw timings retained in reproduction.json,600,true,sparse_cut,512,5,31.507599999999996,14.468289,2.3159902604860565,2.135207960496999,2.359524681874961
+final-current,per-call raw timings retained in materializer_raw.csv,600,true,sparse_cut,512,5,57.200869000000004,21.036592,2.719112915247869,2.6684120201276227,2.978319967411265
+final-current,per-call raw timings retained in materializer_raw.csv,600,true,dense_cut,512,5,36.114752,38.983725,0.9830948940872122,0.7660012156415659,1.253839573824859
+final-current,per-call raw timings retained in materializer_raw.csv,600,true,low_conflict,512,5,8.316916,8.056973000000001,0.9955783106996647,0.8813436510212954,1.0822160097628892

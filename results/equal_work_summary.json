@@ -1,0 +1,158 @@
+{
+  "architectures": {
+    "central-recompute": {
+      "all_final_same": true,
+      "all_restart_recovered": true,
+      "all_zero_false_merge": true,
+      "all_zero_false_split": true,
+      "cases": 10,
+      "certificate_verification_ms_median": 11.459650999995574,
+      "certificate_verification_ms_range": {
+        "max": 18.561180999995486,
+        "median": 11.459650999995574,
+        "min": 10.401906000083727
+      },
+      "elapsed_seconds_median": 0.23978703499994936,
+      "elapsed_seconds_range": {
+        "max": 0.32585179600005176,
+        "median": 0.23978703499994936,
+        "min": 0.21511395200002426
+      },
+      "final_durable_bytes_median": 266853.0,
+      "final_durable_bytes_range": {
+        "max": 266853,
+        "median": 266853.0,
+        "min": 266853
+      },
+      "partition_ambiguous_total": 25,
+      "partition_availability_by_layout": {
+        "authority-majority": 0.6,
+        "authority-minority": 0.4
+      },
+      "partition_query_availability_mean": 0.5,
+      "partition_same_total": 0,
+      "partition_write_availability_mean": 0.5,
+      "persistence_bytes_written_median": 1067960.0,
+      "persistence_bytes_written_range": {
+        "max": 1069460,
+        "median": 1067960.0,
+        "min": 1066460
+      },
+      "rpc_p95_ms_median": 31.41292700001941,
+      "rpc_p95_ms_range": {
+        "max": 53.611626000019896,
+        "median": 31.41292700001941,
+        "min": 27.36428100001831
+      },
+      "wire_bytes_median": 1149719.5,
+      "wire_bytes_range": {
+        "max": 1286066,
+        "median": 1149719.5,
+        "min": 1013373
+      }
+    },
+    "coordinated-quorum": {
+      "all_final_same": true,
+      "all_restart_recovered": true,
+      "all_zero_false_merge": true,
+      "all_zero_false_split": true,
+      "cases": 10,
+      "certificate_verification_ms_median": 11.291543499964973,
+      "certificate_verification_ms_range": {
+        "max": 26.580580999961967,
+        "median": 11.291543499964973,
+        "min": 10.273003999941466
+      },
+      "elapsed_seconds_median": 1.1628892314999462,
+      "elapsed_seconds_range": {
+        "max": 1.8738919809999288,
+        "median": 1.1628892314999462,
+        "min": 1.0238225609999745
+      },
+      "final_durable_bytes_median": 800544.0,
+      "final_durable_bytes_range": {
+        "max": 800544,
+        "median": 800544.0,
+        "min": 800544
+      },
+      "partition_ambiguous_total": 30,
+      "partition_availability_by_layout": {
+        "authority-majority": 0.6,
+        "authority-minority": 0.6
+      },
+      "partition_query_availability_mean": 0.6,
+      "partition_same_total": 0,
+      "partition_write_availability_mean": 0.6,
+      "persistence_bytes_written_median": 3966571.0,
+      "persistence_bytes_written_range": {
+        "max": 4282503,
+        "median": 3966571.0,
+        "min": 3650639
+      },
+      "rpc_p95_ms_median": 96.75709399999732,
+      "rpc_p95_ms_range": {
+        "max": 191.06066699998792,
+        "median": 96.75709399999732,
+        "min": 88.47827600004621
+      },
+      "wire_bytes_median": 3068092.5,
+      "wire_bytes_range": {
+        "max": 3090659,
+        "median": 3068092.5,
+        "min": 3045526
+      }
+    },
+    "peer-evidence": {
+      "all_final_same": true,
+      "all_restart_recovered": true,
+      "all_zero_false_merge": true,
+      "all_zero_false_split": true,
+      "cases": 10,
+      "certificate_verification_ms_median": 11.780674500073474,
+      "certificate_verification_ms_range": {
+        "max": 19.802616999982092,
+        "median": 11.780674500073474,
+        "min": 10.453047999931186
+      },
+      "elapsed_seconds_median": 2.5533232980000093,
+      "elapsed_seconds_range": {
+        "max": 3.4359869170000366,
+        "median": 2.5533232980000093,
+        "min": 2.299336963999963
+      },
+      "final_durable_bytes_median": 1334240.0,
+      "final_durable_bytes_range": {
+        "max": 1334240,
+        "median": 1334240.0,
+        "min": 1334240
+      },
+      "partition_ambiguous_total": 50,
+      "partition_availability_by_layout": {
+        "authority-majority": 1.0,
+        "authority-minority": 1.0
+      },
+      "partition_query_availability_mean": 1.0,
+      "partition_same_total": 0,
+      "partition_write_availability_mean": 1.0,
+      "persistence_bytes_written_median": 6674914.0,
+      "persistence_bytes_written_range": {
+        "max": 6751904,
+        "median": 6674914.0,
+        "min": 6597924
+      },
+      "rpc_p95_ms_median": 101.16571899999371,
+      "rpc_p95_ms_range": {
+        "max": 132.86995299995397,
+        "median": 101.16571899999371,
+        "min": 89.80311499999516
+      },
+      "wire_bytes_median": 5530409.5,
+      "wire_bytes_range": {
+        "max": 5551607,
+        "median": 5530409.5,
+        "min": 5509212
+      }
+    }
+  },
+  "cases": 30
+}

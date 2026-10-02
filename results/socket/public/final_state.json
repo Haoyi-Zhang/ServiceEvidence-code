@@ -1,0 +1,158 @@
+{
+  "cells": [
+    {
+      "epoch": 0,
+      "left": "http://debian.org",
+      "reason": "archived redirect candidate; identity undetermined",
+      "right": "https://www.debian.org",
+      "source": "v0",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://debian.org",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.debian.org",
+      "source": "v1",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://debian.org",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.debian.org",
+      "source": "v2",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://debian.org",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.debian.org",
+      "source": "v3",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://debian.org",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.debian.org",
+      "source": "v4",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://google.com",
+      "reason": "archived redirect candidate; identity undetermined",
+      "right": "http://www.google.com",
+      "source": "v0",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "http://www.google.com",
+      "source": "v1",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "http://www.google.com",
+      "source": "v2",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "http://www.google.com",
+      "source": "v3",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "http://www.google.com",
+      "source": "v4",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://www.google.com",
+      "reason": "archived redirect candidate; identity undetermined",
+      "right": "https://www.google.com",
+      "source": "v0",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://www.google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.google.com",
+      "source": "v1",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://www.google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.google.com",
+      "source": "v2",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://www.google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.google.com",
+      "source": "v3",
+      "vote": "unknown"
+    },
+    {
+      "epoch": 0,
+      "left": "http://www.google.com",
+      "reason": "generated closure; no independent archived observation",
+      "right": "https://www.google.com",
+      "source": "v4",
+      "vote": "unknown"
+    }
+  ],
+  "handles": [
+    "http://debian.org",
+    "http://google.com",
+    "http://maunz.org",
+    "http://www.google.com",
+    "https://www.debian.org",
+    "https://www.google.com"
+  ],
+  "node_id": "n0",
+  "sources": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "stable_floors": [
+    {
+      "epoch": 0,
+      "left": "http://debian.org",
+      "right": "https://www.debian.org"
+    },
+    {
+      "epoch": 0,
+      "left": "http://google.com",
+      "right": "http://www.google.com"
+    },
+    {
+      "epoch": 0,
+      "left": "http://www.google.com",
+      "right": "https://www.google.com"
+    }
+  ],
+  "threshold": 2
+}
