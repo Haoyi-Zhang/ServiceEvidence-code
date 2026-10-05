@@ -22,6 +22,8 @@ The equal-work campaign adds two reference architectures using the same evidence
 
 Five seeds and two fixed client partitions produce 30 paired cases. The comparison reports partition-time write/query availability, wire bytes, cumulative snapshot/spool bytes, final durable bytes, request latency, certificate cost, elapsed time, final correctness, and orderly restart recovery. It isolates an architecture tradeoff on one machine; it is not a production consensus or wide-area benchmark. The reported query availability means responsiveness, not a decisive or globally fresh identity authorization.
 
+For sorted timings `x[0], ..., x[n-1]`, the scale certificate p95 is `x[max(0, floor(0.95*n)-1)]`, the 28th of 30 calls. Equal-work and socket RPC p95 values use `x[floor(0.95*(n-1))]`. These are the estimators used for the retained measurements, not interpolated or uniformly nearest-rank quantiles. Campaigns are reported separately, not pooled.
+
 ## Public evidence and label boundary
 
 `external_inputs/public_http_calibration.csv` contains six factual navigation rows from three released *Web Performance Pitfalls* sample HAR files. Its conservative adapter emits only UNKNOWN evidence. This input calibrates redirects, authorities, and endpoint changes and exercises the service input path; it has no identity labels.
