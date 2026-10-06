@@ -104,6 +104,26 @@ def compare_aggregate(expected: object, observed: object, path: str = "summary")
         require(expected == observed, f"{path} value differs")
 
 
+def verify_summary(rows: list[dict[str, str]], summary: dict) -> None:
+    """Reaggregate current records without fixing environment-sensitive times."""
+    require(summary["cases"] == 30, "summary case count changed")
+    independent = independently_aggregate(rows)
+    compare_aggregate(independent, summary["architectures"], "equal_work_summary.architectures")
+    for architecture, availability in {
+        "peer-evidence": 1.0,
+        "central-recompute": 0.5,
+        "coordinated-quorum": 0.6,
+    }.items():
+        item = summary["architectures"][architecture]
+        require(item["cases"] == 10, "summary architecture count changed")
+        require(item["partition_write_availability_mean"] == availability, "summary write availability changed")
+        require(item["partition_query_availability_mean"] == availability, "summary query availability changed")
+        require(item["partition_same_total"] == 0, "summary records a partial SAME answer")
+        require(item["all_final_same"] is True, "summary final decision predicate failed")
+        require(item["all_zero_false_merge"] is True and item["all_zero_false_split"] is True, "summary correctness predicate failed")
+        require(item["all_restart_recovered"] is True, "summary restart predicate failed")
+
+
 def main() -> int:
     with (RESULTS / "equal_work.csv").open(newline="", encoding="utf-8") as stream:
         rows = list(csv.DictReader(stream))
@@ -118,11 +138,6 @@ def main() -> int:
         "paired comparison contains a duplicate or missing tuple",
     )
 
-    expected_mean_availability = {
-        "peer-evidence": 1.0,
-        "central-recompute": 0.5,
-        "coordinated-quorum": 0.6,
-    }
     expected_case_availability = {
         ("peer-evidence", "authority-minority"): 1.0,
         ("peer-evidence", "authority-majority"): 1.0,
@@ -172,32 +187,16 @@ def main() -> int:
         require(available == int(row["partition_query_acks"]), "detail availability count changed")
 
     summary = json.loads((RESULTS / "equal_work_summary.json").read_text(encoding="utf-8"))
-    require(summary["cases"] == 30, "summary case count changed")
-    independent = independently_aggregate(rows)
-    compare_aggregate(independent, summary["architectures"], "equal_work_summary.architectures")
-    expected_medians = {
-        "central-recompute": 0.23978703499994936,
-        "coordinated-quorum": 1.1628892314999462,
-        "peer-evidence": 2.5533232980000093,
-    }
-    for architecture, availability in expected_mean_availability.items():
-        item = summary["architectures"][architecture]
-        require(item["cases"] == 10, "summary architecture count changed")
-        require(item["partition_write_availability_mean"] == availability, "summary write availability changed")
-        require(item["partition_query_availability_mean"] == availability, "summary query availability changed")
-        require(item["partition_same_total"] == 0, "summary records a partial SAME answer")
-        require(item["all_final_same"] is True, "summary final decision predicate failed")
-        require(item["all_zero_false_merge"] is True and item["all_zero_false_split"] is True, "summary correctness predicate failed")
-        require(item["all_restart_recovered"] is True, "summary restart predicate failed")
-        require(
-            same_number(item["elapsed_seconds_median"], expected_medians[architecture]),
-            f"{architecture} retained median changed",
-        )
+    verify_summary(rows, summary)
+    measured_medians = "/".join(
+        f"{summary['architectures'][architecture]['elapsed_seconds_median']:.9g}"
+        for architecture in ("central-recompute", "coordinated-quorum", "peer-evidence")
+    )
 
     print(
         "PASS: 30 equal-work rows independently aggregated; "
-        f"{verified} state-coupled certificates; retained medians "
-        "0.239787035/1.1628892315/2.553323298 s"
+        f"{verified} state-coupled certificates; current-record medians "
+        f"{measured_medians} s"
     )
     return 0
 

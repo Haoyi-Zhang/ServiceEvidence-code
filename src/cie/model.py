@@ -312,8 +312,15 @@ class Replica:
         be exceeded, a floor regresses, a floor is absent, or a floor is unsealed.
         Relations with no acknowledged floor retain all evidence.
         """
-        if retain_pending < 0:
-            raise ValueError("retain_pending must be non-negative")
+        if type(retain_pending) is not int or retain_pending < 0:
+            raise ValueError("retain_pending must be a non-negative integer")
+        if not isinstance(stable_epochs, Mapping):
+            raise ValueError("stable epochs must be a mapping")
+        for pair, floor in stable_epochs.items():
+            if (not isinstance(pair, tuple) or len(pair) != 2
+                    or not all(isinstance(handle, str) and handle for handle in pair)
+                    or pair[0] >= pair[1] or type(floor) is not int or floor < -1):
+                raise ValueError("stable floors require canonical pairs and integer epochs >= -1")
         grouped = self.relation_epochs()
         unknown_pairs = set(stable_epochs) - set(grouped)
         if unknown_pairs:

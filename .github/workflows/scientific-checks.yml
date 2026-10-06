@@ -1,0 +1,84 @@
+name: Scientific checks
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-science:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONPATH: src
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Preserve retained evidence and capture this execution
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .scientific-results/retained .scientific-results/run-outputs
+          cp -a results/. .scientific-results/retained/
+          python -B scripts/capture_environment.py --output .scientific-results/environment.json --context scientific-checks --storage-path .scientific-results
+          touch .scientific-results/run-start
+      - name: Unit tests and retained-data gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          ulimit -v 3670016
+          timeout 180s bash scripts/check_all.sh 2>&1 | tee .scientific-results/retained-checks.log
+      - name: Fresh finite and synthetic campaigns
+        shell: bash
+        run: |
+          set -euo pipefail
+          ulimit -v 3670016
+          timeout 180s python -B experiments/run_all.py --stage unsealed 2>&1 | tee .scientific-results/sealing.log
+          timeout 180s python -B experiments/exact_oracles.py 2>&1 | tee .scientific-results/exact.log
+          timeout 180s python -B experiments/materializer_campaign.py 2>&1 | tee .scientific-results/materializer.log
+          timeout 180s python -B experiments/topology_campaign.py 2>&1 | tee .scientific-results/topology.log
+          timeout 180s python -B experiments/socket_campaign.py --services 20 2>&1 | tee .scientific-results/socket-pilot.log
+          for seed in 1 2 3 4 5; do
+            timeout 180s python -B experiments/socket_campaign.py --services 100 --seed "$seed" 2>&1 | tee ".scientific-results/socket-$seed.log"
+          done
+          timeout 180s python -B experiments/socket_campaign.py --public 2>&1 | tee .scientific-results/socket-passive-fixture.log
+          timeout 360s python -B experiments/equal_work_campaign.py 2>&1 | tee .scientific-results/equal-work.log
+          timeout 180s python -B experiments/process_crash_campaign.py 2>&1 | tee .scientific-results/process-crash.log
+          timeout 60s python -B scripts/verify_equal_work.py 2>&1 | tee .scientific-results/equal-work-verification.log
+          timeout 60s python -B scripts/verify_process_crash.py 2>&1 | tee .scientific-results/process-crash-verification.log
+          python -B - <<'PY'
+          import csv
+          from pathlib import Path
+          from scripts.verify_tpds import summarize_raw, compare_summary
+          directory = Path('results/tpds')
+          def rows(name):
+              with (directory / name).open(newline='', encoding='utf-8') as stream:
+                  return list(csv.DictReader(stream))
+          compare_summary(summarize_raw(rows('materializer_raw.csv')), rows('materializer_summary.csv'), 'this-execution')
+          PY
+      - name: Retain raw outputs even if a gate fails
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .scientific-results/run-outputs
+          if [[ -f .scientific-results/run-start ]]; then
+            find results -type f -newer .scientific-results/run-start -exec cp --parents '{}' .scientific-results/run-outputs/ \;
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: scientific-checks-${{ github.run_id }}
+          path: .scientific-results/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14

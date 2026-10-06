@@ -222,40 +222,59 @@ def run_faults() -> List[Mapping[str, object]]:
     return rows
 
 
+def transient_merges(votes: Sequence[str]) -> tuple[bool, bool]:
+    """Exercise both rules on every prefix of one conflicting source vector."""
+    sources = tuple(f"v{i}" for i in range(len(votes)))
+    replica = Replica("sealing", sources, 2, handles=("a", "b"))
+    unsealed_merge = sealed_merge = False
+    same_count = 0
+    negative_seen = False
+    for source, vote in zip(sources, votes):
+        same_count += int(vote == "same")
+        negative_seen = negative_seen or vote == "different"
+        unsealed_merge = unsealed_merge or (same_count >= 2 and not negative_seen)
+        replica.add(EvidenceCell("a", "b", 0, source, Vote(vote), "sealing schedule"))
+        # Do not substitute a theoretical zero for an executed model outcome.
+        sealed_merge = (len(replica.materialize().components) == 1) or sealed_merge
+    return unsealed_merge, sealed_merge
+
+
 def run_unsealed_safety() -> List[Mapping[str, object]]:
     rng = random.Random(9901)
     trials = 20_000
-    random_unsafe = 0
+    random_unsafe = random_sealed = 0
     for _ in range(trials):
         cells = ["same", "same", "different", "unknown", "unknown"]
         rng.shuffle(cells)
-        same_count = 0
-        negative_seen = False
-        for vote in cells:
-            same_count += int(vote == "same")
-            negative_seen = negative_seen or vote == "different"
-            if same_count >= 2 and not negative_seen:
-                random_unsafe += 1
-                break
+        unsafe, sealed = transient_merges(cells)
+        random_unsafe += int(unsafe)
+        random_sealed += int(sealed)
+    adversarial_unsafe = adversarial_sealed = 0
+    for _ in range(trials):
+        unsafe, sealed = transient_merges(["same", "same", "different", "unknown", "unknown"])
+        adversarial_unsafe += int(unsafe)
+        adversarial_sealed += int(sealed)
     rows = [
         {
             "schedule": "uniform random delivery order",
             "trials": trials,
             "unsealed_transient_false_merges": random_unsafe,
             "unsealed_rate": random_unsafe / trials,
-            "sealed_transient_false_merges": 0,
-            "sealed_rate": 0.0,
+            "sealed_transient_false_merges": random_sealed,
+            "sealed_rate": random_sealed / trials,
         },
         {
             "schedule": "adversarial same-votes first",
             "trials": trials,
-            "unsealed_transient_false_merges": trials,
-            "unsealed_rate": 1.0,
-            "sealed_transient_false_merges": 0,
-            "sealed_rate": 0.0,
+            "unsealed_transient_false_merges": adversarial_unsafe,
+            "unsealed_rate": adversarial_unsafe / trials,
+            "sealed_transient_false_merges": adversarial_sealed,
+            "sealed_rate": adversarial_sealed / trials,
         },
     ]
     write_csv(RESULTS / "unsealed_safety.csv", rows)
+    if random_sealed or adversarial_sealed:
+        raise RuntimeError("sealed rule authorized a transient merge")
     return rows
 
 

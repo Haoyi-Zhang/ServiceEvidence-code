@@ -91,7 +91,9 @@ def generate_workload(
 
     # Shared front doors connect distinct services.  Half receive an explicit
     # separator from a different source; half remain underdetermined.
-    collision_count = max(1, int(service_count * collision_fraction))
+    collision_count = (
+        max(1, int(service_count * collision_fraction)) if collision_fraction > 0 else 0
+    )
     for offset in range(collision_count):
         left_service = offset % service_count
         right_service = (offset * 17 + 3) % service_count
@@ -181,10 +183,14 @@ def generate_to_observation_cap(
     seed: int = 23,
 ) -> Workload:
     """Return the largest generated workload with at most ``cap`` cells."""
-    if cap < len(sources) * 4:
+    if type(cap) is not int or cap < 0:
+        raise ValueError("cap must be a non-negative integer")
+    best = generate_workload(2, sources=sources, seed=seed)
+    # The minimum includes both epochs and the generated cross-service edge,
+    # not just the four within-service chain relations.
+    if best.observation_count > cap:
         raise ValueError("cap is too small for a two-service workload")
     low, high = 2, max(3, cap // (len(sources) * 2))
-    best = generate_workload(2, sources=sources, seed=seed)
     while low <= high:
         middle = (low + high) // 2
         candidate = generate_workload(middle, sources=sources, seed=seed)
