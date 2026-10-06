@@ -95,15 +95,15 @@ def render_materializer_provenance(output: Path) -> dict[str, object]:
     lookup = {(row["execution"], row["family"]): row for row in replications}
     lines = [
         r"\begin{table}[t]\centering",
-        r"\caption{Materializer timing provenance at 512 handles. Values are median reference/indexed speedups. The primary historical execution is summary-only and cannot be independently reaggregated.}",
+        r"\caption{Materializer timings at 512 handles. Values are median reference/indexed speedups. The summary-only run lacks per-call records and cannot be independently reaggregated.}",
         r"\label{tab:materializer-provenance}\scriptsize",
         r"\begin{tabular}{lrrrr}\toprule",
         r"Execution & Sparse & Dense & Low conflict & Raw calls\\\midrule",
     ]
     for execution, label in (
-        ("final-current", "Final current"),
-        ("retained-clean", "Clean retained"),
-        ("summary-only-primary", "Earlier primary"),
+        ("final-current", "Raw-retained A"),
+        ("retained-clean", "Raw-retained B"),
+        ("summary-only-primary", "Summary only"),
     ):
         values = [
             float(lookup[(execution, family)]["paired_speedup_median"])
