@@ -284,8 +284,8 @@ def crosses_components(edge: Pair, left_members: Set[str], right_members: Set[st
 
 
 def verify_same(normalized: Mapping[str, object], certificate: Mapping[str, object]) -> None:
-    _, threshold, relation_decisions = decisions(normalized)
-    _, _, component_of, accepted, _, _ = materialize(normalized)
+    relation_decisions, _, component_of, accepted, _, _ = materialize(normalized)
+    threshold = normalized["threshold"]
     query = query_of(normalized, certificate)
     raw_path = certificate.get("path")
     require(isinstance(raw_path, list) and all(isinstance(item, str) for item in raw_path), "same path must be a list of handles")
@@ -379,6 +379,17 @@ def component_separators(
 def minimal_ambiguity(
     normalized: Mapping[str, object], query_left: str, query_right: str
 ):
+    """Reconstruct a checker-owned view for the standalone public helper."""
+    reconstructed = materialize(normalized)
+    return _minimal_ambiguity_prepared(
+        normalized, query_left, query_right, reconstructed
+    )
+
+
+def _minimal_ambiguity_prepared(
+    normalized: Mapping[str, object], query_left: str, query_right: str,
+    reconstructed,
+):
     """Enumerate globally negative-compatible authorization paths.
 
     This verifier intentionally uses an explicit stack rather than the service
@@ -386,8 +397,8 @@ def minimal_ambiguity(
     always provides a finite incumbent, so only positive-cost paths no more
     expensive than |sources| need consideration.
     """
-    sources, threshold, relation_decisions = decisions(normalized)
-    _, _, component_of, _, _, different = materialize(normalized)
+    sources, threshold = normalized["sources"], normalized["threshold"]
+    relation_decisions, _, component_of, _, _, different = reconstructed
     left_component = component_of[query_left]
     right_component = component_of[query_right]
     separators = component_separators(component_of, different)
@@ -541,15 +552,16 @@ def minimal_ambiguity(
 
 def verify_ambiguous(normalized: Mapping[str, object], certificate: Mapping[str, object]) -> None:
     query_left, query_right = query_of(normalized, certificate)
-    _, _, component_of, _, _, different = materialize(normalized)
+    reconstructed = materialize(normalized)
+    _, _, component_of, _, _, different = reconstructed
     separators = component_separators(component_of, different)
     left_component = component_of[query_left]
     right_component = component_of[query_right]
     require(left_component != right_component, "ambiguous query endpoints are in one component")
     query_components = (min(left_component, right_component), max(left_component, right_component))
     require(query_components not in separators, "ambiguous query has a selected negative separator")
-    optimum, expected_steps, expected_path, rebuilt_separators, rebuilt_components = minimal_ambiguity(
-        normalized, query_left, query_right
+    optimum, expected_steps, expected_path, rebuilt_separators, rebuilt_components = _minimal_ambiguity_prepared(
+        normalized, query_left, query_right, reconstructed
     )
     require(rebuilt_separators == separators and rebuilt_components == component_of, "ambiguity reconstruction mismatch")
     require(certificate.get("globally_sufficient") is True, "ambiguity plan is not marked globally sufficient")
