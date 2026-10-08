@@ -63,7 +63,7 @@ The finite checks comprise:
 - 21 admissible floor states and 9,261 associativity triples; and
 - 4,096 four-component diagnostic graphs with 18,432 queries.
 
-The last family finds 144 queries where an adjacency-only ambiguity path would contain a non-adjacent selected-negative pair. The repaired search rejects all 144; the globally compatible optimum costs one additional slot in 108 cases and two in 36. These are exact bounded comparisons, not whole-program verification.
+The last family finds 144 queries where an adjacency-only ambiguity path would contain a non-adjacent selected-negative pair. The globally compatible objective excludes these paths and costs one additional slot in 108 cases and two in 36. This diagnostic family compares abstract objectives; the separate state-coupled regressions call the production search and checker. Neither finite family establishes whole-program correctness.
 
 Check one certificate with:
 

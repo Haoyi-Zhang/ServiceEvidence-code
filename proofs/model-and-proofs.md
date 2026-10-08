@@ -207,11 +207,13 @@ pairs and 9,261 triples.
 
 A second diagnostic oracle enumerates 4,096 four-component graphs and 18,432
 query cases. The former adjacency-only objective selects a path containing a
-non-adjacent selected-negative pair in 144 cases. The repaired search rejects
-all 144: the globally compatible optimum costs one additional source slot in
+non-adjacent selected-negative pair in 144 cases. The globally compatible objective excludes
+all 144 such paths: its optimum costs one additional source slot in
 108 cases and two in 36, with maximum increase two. These finite families do not
 prove behavior on larger graphs, but they independently expose the old rule's
-failure and check the repaired optimum. The floor-hole examples and strict
+failure and compare the two abstract objectives; they do not call the production
+search or checker. Separate state-coupled regressions exercise those implementations.
+The floor-hole examples and strict
 state-boundary tests remain explicit regressions rather than being hidden in
 aggregate counts.
 
