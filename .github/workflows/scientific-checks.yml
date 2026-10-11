@@ -53,6 +53,8 @@ jobs:
           timeout 180s python -B experiments/socket_campaign.py --public 2>&1 | tee .scientific-results/socket-passive-fixture.log
           timeout 360s python -B experiments/equal_work_campaign.py 2>&1 | tee .scientific-results/equal-work.log
           timeout 180s python -B experiments/process_crash_campaign.py 2>&1 | tee .scientific-results/process-crash.log
+          timeout 180s python -B experiments/mutex_campaign.py 2>&1 | tee .scientific-results/mutex.log
+          timeout 60s python -B scripts/verify_mutex.py 2>&1 | tee .scientific-results/mutex-verification.log
           timeout 60s python -B scripts/verify_equal_work.py 2>&1 | tee .scientific-results/equal-work-verification.log
           timeout 60s python -B scripts/verify_process_crash.py 2>&1 | tee .scientific-results/process-crash-verification.log
           python -B - <<'PY'

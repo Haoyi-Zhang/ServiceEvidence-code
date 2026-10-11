@@ -44,17 +44,17 @@ The artifact uses Python's standard library and Bash. From this directory:
 ./scripts/reproduce_extended.sh
 ```
 
-`check_all.sh` discovers 74 unit and boundary tests: the retained 68-test family, including all 720 orders of the six-cell split history, strict parsing/common-floor regressions, globally compatible ambiguity regressions, public-extraction/predicate checks, atomic persistence failures, concurrent-ingest serialization, read-only acknowledgement, stale-temporary cleanup, cross-process hash-seed determinism, and 11 workload-bound, compaction-domain, executed-sealing-counter, and timing-reaggregation regressions; plus six pure checker-context regressions. It also runs the public-input and 68-reference audits (including per-paper supported points, project deltas, and named source anchors), checks representative certificates in normal and optimized Python modes, verifies every retained result surface, evaluates 276 public target pairs, and checks the 30 equal-work rows, independent-process recovery summaries, 60 materializer cases, and 2,550 exact topology placements.
+`check_all.sh` discovers 82 unit and boundary tests: the retained 68-test family, including all 720 orders of the six-cell split history, strict parsing/common-floor regressions, globally compatible ambiguity regressions, public-extraction/predicate checks, atomic persistence failures, concurrent-ingest serialization, read-only acknowledgement, stale-temporary cleanup, cross-process hash-seed determinism, and 11 workload-bound, compaction-domain, executed-sealing-counter, and timing-reaggregation regressions; plus six pure checker-context and eight Mutex Watershed regressions. It also runs the public-input and 69-reference audits (including per-paper supported points, project deltas, and named source anchors), checks representative certificates in normal and optimized Python modes, verifies the retained result surfaces, evaluates 276 public target pairs, and checks the 30 equal-work rows, independent-process recovery summaries, 60 materializer cases, and 2,550 exact topology placements. The passive MWS campaign can be rerun separately using the commands below.
 
-The six portable regressions compare complete certificates against an independent raw-cell/block/permutation oracle over 729 four-handle ternary graphs, partial vectors and named boundary fixtures. They reject certificate/schema mutations and count checker-owned reconstruction calls without timing. Run only this pure subset with `PYTHONPATH=src python -B -m unittest discover -s tests -p test_checker_context.py -v`. It starts no services or campaigns. Discovery of 74 tests does not extend the retained 68-test Linux receipt to an unexecuted full run.
+The six portable regressions compare complete certificates against an independent raw-cell/block/permutation oracle over 729 four-handle ternary graphs, partial vectors and named boundary fixtures. They reject certificate/schema mutations and count checker-owned reconstruction calls without timing. Run only this pure subset with `PYTHONPATH=src python -B -m unittest discover -s tests -p test_checker_context.py -v`. It starts no services or campaigns. Discovery of 82 tests does not extend the retained 68-test Linux receipt to an unexecuted full run.
 
-The retained Linux run in `results/current/` passes all 68 tests without skips. It also completes 30 equal-work cases, three owned process-recovery cases with six restarted processes, 60 materializer cases with 300 paired repetitions, and 12,750 topology query checks. Five 100-service loopback cases take 3.71–4.07 seconds and 62.79–63.27 MiB peak RSS. Public adapter inputs are passive replay fixtures, not external-service experiments. Large raw JSON outputs in this directory use `.json.gz`; `gzip` or Python's standard-library `gzip.open` restores their exact bytes. Historical results and tables retain their own execution context.
+The retained Linux run in `results/current/` passes all 68 tests without skips. It also completes 30 equal-work cases, three owned process-recovery cases with six restarted processes, 60 materializer cases with 300 paired repetitions, and 12,750 topology query checks. Five 100-service loopback cases take 3.71�C4.07 seconds and 62.79�C63.27 MiB peak RSS. Public adapter inputs are passive replay fixtures, not external-service experiments. Large raw JSON outputs in this directory use `.json.gz`; `gzip` or Python's standard-library `gzip.open` restores their exact bytes. Historical results and tables retain their own execution context.
 
 `reproduce.sh` recreates and independently verifies the retained core simulation families, 207 certificate measurements, compaction, five scale cases, the six-row navigation calibration, and the public target benchmark. It is self-contained in an empty `results/` directory; its final verifier intentionally does not require extended-campaign files.
 
 `reproduce_extended.sh` additionally runs the independent finite oracles, the full 30-case equal-work campaign, three independent-process recovery cases, the peer loopback pilot and five 2,200-cell cases, and the public adapter replay. Final verification covers seven peer-service cases, 70 peer-service state-coupled certificates, 135 equal-work certificates, 30 process-campaign certificate checks, availability and persistence predicates, event counts, and case limits.
 
-Scientific runs are capped at 180 seconds. Service cases additionally enforce 120 seconds, 5,000 requests, 100 MiB application wire bytes, a 4 MiB frame limit, and admission limits of 10,000 cells and 30,000 handles. The simulator alone has the larger 80,000-cell and 500,000-delivery caps. Faults are deterministic application-message omissions, duplication, peer-order changes, temporary partitions, and post-acknowledgement process exits—not raw TCP packet manipulation or power-loss injection.
+Scientific runs are capped at 180 seconds. Service cases additionally enforce 120 seconds, 5,000 requests, 100 MiB application wire bytes, a 4 MiB frame limit, and admission limits of 10,000 cells and 30,000 handles. The simulator alone has the larger 80,000-cell and 500,000-delivery caps. Faults are deterministic application-message omissions, duplication, peer-order changes, temporary partitions, and post-acknowledgement process exits��not raw TCP packet manipulation or power-loss injection.
 
 The finite checks comprise:
 
@@ -104,7 +104,63 @@ No large unseen OONI holdout or 150-window crash experiment is included or claim
 
 ## Retained results
 
-All seven event-loop peer-service cases converge in one fair repair round after three faulted rounds. Representative generated queries change from ambiguous during the partition to same after healing. Missing acknowledgements and malformed batches are rejected; floor propagation, stale-state suppression, compaction, and orderly restart preserve the checked state. The five 2,200-cell cases use 191–200 request/response exchanges.
+### Mutex Watershed priority and ablation comparison
+
+`src/cie/mutex_baseline.py` locally reimplements Wolf et al., *The Mutex
+Watershed: Efficient, Parameter-Free Image Partitioning* (ECCV 2018,
+doi:10.1007/978-3-030-01225-0_34), Algorithm 2 and Section 3.4. It stores active
+negative-edge IDs incident to each component, tests ID intersection before
+union, inherits constraints, and ignores a negative whose endpoints are already
+connected. General MWS jointly orders both signs by strength. CIE is its
+negative-first lexical specialization after sealed-vector selection, not every
+weighted MWS run. The priority-preserving comparator gives negative edges
+strength 2 and positive edges strength 1, with lexical positive ties. It adapts
+MWS's forest-only bookkeeping to retain CIE's redundant internal support edges;
+this changes no union. The component constraint is not a new clustering rule.
+
+The `relation_veto` ablation masks negative votes as unknown only during
+aggregation, keeping original cells, counts, greatest sealed epochs, closure and
+threshold fixed. The `component_veto` ablation disables only the union guard,
+keeping selected decisions and negative records fixed. Unsafe ablation views
+are local experimental results, never inputs to the certificate service.
+Relation-veto removal leaves no selected negative edges, making its component
+guard column inert; the complete four-way factorial retains this interaction.
+The historical `no negative veto` result masks negative cells at the relation
+layer and therefore never isolated component vetoes. Its original rows and
+labels are retained; the new verifier matches every generated metric to them.
+
+The 15 original generated workloads have no guard rejection or component-only
+effect. The separate sealed three-source triangle has positive `ab` and `bc`
+and negative `ac`: guarded components are `{a,b},{c}`, whereas removing only
+the component guard merges all three and violates `ac`. It is an admissible
+source state, not a counterexample satisfying A4 separability. Across 729
+four-handle ternary graphs, the component-only ablation changes 259 partitions
+and internalizes 354 selected-negative edge occurrences. All full views agree
+with the scanning/indexed implementations and same-priority MWS comparator.
+
+```sh
+PYTHONPATH=src python -B -m unittest discover -s tests -p test_mutex_baseline.py -v
+PYTHONPATH=src python -B experiments/mutex_campaign.py --out results/mutex
+python -B scripts/verify_mutex.py
+```
+
+`results/mutex/` contains the passive witness state and weighted-priority
+counterexample, 60 factorial rows on the original workloads, 900 raw complete
+calls, 60 stress-case rows, 12 summaries, checks and a separate Windows/Python
+environment record. The 60 stress cases span three families, four sizes and
+five seeds with five repetitions and three rotated implementations. All views
+match; no speed threshold is a pass condition. At 512 handles, sparse-cut
+median scanning/indexed/MWS times are 53.69/24.44/27.94 ms; the median paired
+MWS/indexed ratio is 1.15 (dense cut 1.34; low conflict 1.25). These are
+complete-call Python comparisons including decisions and ordering, not the
+authors' optimized image implementation or a Web/deployment benchmark. They
+are not pooled with older Linux timings. Eight additional tests cover 125
+three-node weighted graphs, 200 eight-node seeded graphs against an explicit
+block oracle, partial epochs/floors, signed parallel edges, redundant positives,
+closure and input boundaries. The newly executed targeted subsets do not
+constitute a full 82-test run.
+
+All seven event-loop peer-service cases converge in one fair repair round after three faulted rounds. Representative generated queries change from ambiguous during the partition to same after healing. Missing acknowledgements and malformed batches are rejected; floor propagation, stale-state suppression, compaction, and orderly restart preserve the checked state. The five 2,200-cell cases use 191�C200 request/response exchanges.
 
 The independent-process campaign contains three cases, four processes per case, five evidence sources, 2,200 cells, and two post-ack abrupt exits per case. All 12 partition-time queries remain ambiguous; all six restarts recover their acknowledged state; all cases converge in one heal round; and 30 generated certificates verify. Elapsed times are retained per case in the result files.
 

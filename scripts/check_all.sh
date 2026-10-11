@@ -25,3 +25,4 @@ python "$ROOT/scripts/verify_process_crash.py"
 python "$ROOT/scripts/verify_environment_inventory.py"
 
 python "$ROOT/scripts/verify_tpds.py"
+python "$ROOT/scripts/verify_mutex.py"

@@ -302,3 +302,67 @@ and ten quorum sets yields 2,550 cases. Central exceeds quorum in 940, quorum
 exceeds central in 510, and 1,100 tie. The uniform-case means are 107/255 and
 92/255. For two-block partitions they are instead 43/75 and 47/75. The ranking
 reversal is an exact finite sensitivity result, not a failure-probability model.
+
+## 16. MWS specialization and controlled veto obligations
+
+The relevant antecedent is Wolf et al., *The Mutex Watershed: Efficient,
+Parameter-Free Image Partitioning*, ECCV 2018, Algorithm 2 and Sections
+3.1/3.3/3.4, doi:10.1007/978-3-030-01225-0_34. This section derives the
+specialization; it does not claim the negative-component constraint as new.
+
+For a fixed selected decision graph, assign every negative strength 2 and every
+positive strength 1, with lexical positive ties. MWS activates all negatives
+before the first union. Its incidence set M(A) contains IDs of active negative
+edges touching component A. For disjoint components A,B,
+M(A) intersects M(B) iff an active negative has one endpoint in each. This is
+also equivalent to the handle-neighbor guard B(A) intersecting the members of
+B. Initially both representations encode exactly the selected negatives. On an
+admitted union, both representations inherit their respective sets by union;
+no active negative is internalized. Induction over the identical ordered
+positives therefore gives equal components and rejections. MWS's connected
+test skips redundant positives; CIE records them as accepted support. Adding
+only those skipped internal positives to the comparator's support list restores
+the complete PartitionView without altering any component or union.
+
+The equivalence is not universal across strengths. With attractive ab of
+strength 3, attractive bc of strength 2, and repulsive ac of strength 1,
+Algorithm 2 first merges all three. It ignores ac because its endpoints are
+already connected. Negative-first selection instead activates ac, accepts ab
+and rejects bc. Neither conclusion contradicts MWS: the priorities differ.
+
+Relation-level negative dominance and the component guard are different
+obligations. Masking negative votes during aggregation changes relation labels
+and removes selected negatives. Disabling only the component guard preserves
+those labels and records while allowing unsafe unions. The former operation
+corresponds to the retained `no negative veto` baseline; it cannot measure an
+isolated component-guard benefit. With relation dominance disabled, there are
+no selected negatives left, so the component factor is inert.
+
+In the original generated q=2 family, every selected positive stays within a
+truth class and every selected negative crosses classes. Induction makes every
+positive component a subset of one class; no selected negative can cross two
+components joined by a selected positive. Hence the component guard never
+rejects, and removing it alone gives the same partition. Executing the same 15
+600-service parameter cases confirms zero guard rejections and zero changed
+partitions. All 60 factorial rows match the corresponding retained pairwise
+metrics exactly; this is not new accuracy on an external dataset.
+
+The explicit sealed triangle ab,bc positive and ac negative is admissible under
+A1/A2. It forces a component-level rejection of bc after ab. Removing only
+that guard merges all three and violates ac while keeping decisions identical.
+If the negative is sound with truth classes {a,b},{c}, then bc violates A4;
+the example establishes reachability of the negative-consistency obligation,
+not a failure of the conditional non-conflation theorem. Across all 729
+four-handle ternary graphs, guard removal changes 259 partitions and creates
+354 internalized selected-negative edge occurrences.
+
+Eight pure tests in `tests/test_mutex_baseline.py` extend the previously
+described 74-test discovery to 82, without extending the retained 68-test Linux
+receipt to a full new run. A separate explicit-block active-negative oracle
+checks 125 three-node weighted graphs and 200 seeded eight-node graphs.
+Additional checks cover 80 multi-epoch/floor states, closure, redundant support,
+signed parallel edges and invalid strengths. The 60-case, 900-call passive
+stress campaign compares complete views and records its own environment and
+raw calls; `scripts/verify_mutex.py` reaggregates all medians and per-seed ratios.
+Neither finite checks nor Python timing comparisons establish global novelty,
+production deployment or an advantage over the authors' optimized image code.
