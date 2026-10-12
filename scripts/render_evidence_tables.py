@@ -23,7 +23,7 @@ def public_table() -> str:
     control = rows["closed-world-endpoint-negative-control"]
     return rf"""\begin{{table}}[t]
 \centering
-\caption{{Public probe/control target-equivalence check over {selected['pairs']} pairs. ``Err.'' counts asserted labels inconsistent with exact normalized input-target equality; it is not an ownership or operator label.}}
+\caption{{Public target-equivalence results over {selected['pairs']} probe/control pairs.}}
 \label{{tab:public-target}}
 \scriptsize
 \setlength{{\tabcolsep}}{{3.5pt}}
@@ -58,9 +58,10 @@ def equal_table() -> str:
         )
     return """\\begin{table}[t]
 \\centering
-\\caption{Equal-work loopback comparison: medians over ten cases per architecture (five seeds, two partition layouts). Response rate is the fraction of partition-time query sites that receive a response; all such answers are ambiguous. Bytes are MiB.}
+\\caption{Loopback workflow medians over ten cases per architecture. Volumes are MiB.}
 \\label{tab:equal-work}
-\\scriptsize
+\\footnotesize
+\\setlength{\\tabcolsep}{3.5pt}
 \\begin{tabular}{lrrrrr}
 \\toprule
 Architecture & Response \\% & Wire & Persisted & Final & Time (s)\\\\

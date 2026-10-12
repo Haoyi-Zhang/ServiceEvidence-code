@@ -15,7 +15,7 @@ if args.numbers:
         print(f"\\newcommand{{\\{name}}}{{{value:.3f}}}")
 else:
     print(r"\begin{table}[t]\centering")
-    print(r"\caption{Five-endpoint TCP campaigns, 2,200 cells each. Wire bytes include all request/response frames and diagnostic reads; endpoints share one event loop.}")
+    print(r"\caption{Five-endpoint TCP measurements over 2,200-cell cases.}")
     print(r"\label{tab:socket}\small\begin{tabular}{rrrr}")
     print(r"\toprule Seed & RPCs & Wire (MiB) & Time (s)\\\midrule")
     for row in rows:
