@@ -1,0 +1,1585 @@
+{
+  "partition": [
+    {
+      "certificate": {
+        "authorization_gap": 3,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 3,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ],
+            "missing_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": false,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n0",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 3,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 3,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ],
+            "missing_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": false,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n1",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [
+              "v0",
+              "v1"
+            ],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": false,
+            "to_component": 4,
+            "unknown_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n2",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [
+              "v0",
+              "v1"
+            ],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": false,
+            "to_component": 4,
+            "unknown_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n3",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [
+              "v0",
+              "v1"
+            ],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": false,
+            "to_component": 4,
+            "unknown_sources": [
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n4",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    }
+  ],
+  "healed": [
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": true,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1",
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n0",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": true,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1",
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n1",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": true,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1",
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n2",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": true,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1",
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n3",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    },
+    {
+      "certificate": {
+        "authorization_gap": 2,
+        "component_path": [
+          0,
+          4
+        ],
+        "edge_count": 1,
+        "globally_sufficient": true,
+        "kind": "ambiguous",
+        "query": [
+          "http://debian.org",
+          "https://www.debian.org"
+        ],
+        "steps": [
+          {
+            "authorization_gap": 2,
+            "different_sources": [],
+            "epoch": 0,
+            "from_component": 0,
+            "gap_sources": [
+              "v0",
+              "v1"
+            ],
+            "missing_sources": [],
+            "observed": true,
+            "pair": [
+              "http://debian.org",
+              "https://www.debian.org"
+            ],
+            "same_sources": [],
+            "sealed": true,
+            "to_component": 4,
+            "unknown_sources": [
+              "v0",
+              "v1",
+              "v2",
+              "v3",
+              "v4"
+            ]
+          }
+        ]
+      },
+      "state": {
+        "cells": [
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.debian.org",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://debian.org",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.debian.org",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "http://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "http://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "archived redirect candidate; identity undetermined",
+            "right": "https://www.google.com",
+            "source": "v0",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v1",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v2",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v3",
+            "vote": "unknown"
+          },
+          {
+            "epoch": 0,
+            "left": "http://www.google.com",
+            "reason": "generated closure; no independent archived observation",
+            "right": "https://www.google.com",
+            "source": "v4",
+            "vote": "unknown"
+          }
+        ],
+        "handles": [
+          "http://debian.org",
+          "http://google.com",
+          "http://maunz.org",
+          "http://www.google.com",
+          "https://www.debian.org",
+          "https://www.google.com"
+        ],
+        "node_id": "n4",
+        "sources": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "stable_floors": [],
+        "threshold": 2
+      }
+    }
+  ]
+}

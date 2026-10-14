@@ -1,0 +1,13 @@
+{
+  "acknowledged": false,
+  "error": {
+    "type": "PermissionError",
+    "errno": 13,
+    "winerror": null
+  },
+  "replaced_snapshot_exists": true,
+  "cells_in_memory": 1,
+  "contract": "unchanged Service: content fsync + replace + parent directory fsync",
+  "substitute_used": false,
+  "power_loss_test": false
+}

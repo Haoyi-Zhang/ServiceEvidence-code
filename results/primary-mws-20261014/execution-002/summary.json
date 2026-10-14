@@ -1,0 +1,19 @@
+{
+  "graphs": 4096,
+  "queries": 24576,
+  "executed_plans": 7862,
+  "new_cells": 41590,
+  "mismatches": 0,
+  "sources": 5,
+  "alphabet": [
+    "same",
+    "different",
+    "unknown",
+    "absent"
+  ],
+  "plan_edge_counts": {
+    "1": 7418,
+    "2": 432,
+    "3": 12
+  }
+}

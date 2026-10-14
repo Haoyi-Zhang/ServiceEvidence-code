@@ -86,7 +86,14 @@ def mutex_watershed(handles: Iterable[str], edges: Iterable[SignedEdge]) -> Mute
                 a, b = b, a
             parent[b] = a
             members[a].update(members.pop(b))
-            incident[a].update(incident.pop(b))
+            # Section 3.4 merges the smaller mutex-ID table, independently of
+            # the union-find root selected by vertex count. A small component
+            # may have many incident negatives; moving its entire table into
+            # an empty table would not have the cited min-table merge cost.
+            inherited = incident.pop(b)
+            if len(incident[a]) < len(inherited):
+                incident[a], inherited = inherited, incident[a]
+            incident[a].update(inherited)
             forest.append(edge.pair)
     return MutexResult(
         tuple(sorted(tuple(sorted(v)) for v in members.values())),

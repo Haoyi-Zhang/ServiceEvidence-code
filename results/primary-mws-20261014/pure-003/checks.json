@@ -1,0 +1,19 @@
+{
+  "exhaustive": {
+    "graphs": 729,
+    "full_view_equal": 729,
+    "component_off_changes": 259,
+    "component_off_negative_violations": 354
+  },
+  "generated_cases": 15,
+  "generated_factorial_rows": 60,
+  "generated_component_guard_rejections": 0,
+  "generated_component_only_changed_partitions": 0,
+  "stress_cases": 60,
+  "stress_raw_calls": 900,
+  "full_view_equal": true,
+  "max_stress_cells": 13821,
+  "reachable_component_only_negative_violations": 1,
+  "elapsed_seconds": 15.155999999988126,
+  "inference_scope": "synthetic bounded graphs; no image-code, Web-population or deployment ranking"
+}

@@ -1,0 +1,87 @@
+{
+  "weighted_edges": [
+    {
+      "pair": [
+        "a",
+        "b"
+      ],
+      "vote": "same",
+      "weight": 3
+    },
+    {
+      "pair": [
+        "b",
+        "c"
+      ],
+      "vote": "same",
+      "weight": 2
+    },
+    {
+      "pair": [
+        "a",
+        "c"
+      ],
+      "vote": "different",
+      "weight": 1
+    }
+  ],
+  "weighted_result": {
+    "components": [
+      [
+        "a",
+        "b",
+        "c"
+      ]
+    ],
+    "positive_forest": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "b",
+        "c"
+      ]
+    ],
+    "redundant_positive": [],
+    "rejected_positive": [],
+    "active_negative": [],
+    "ignored_negative": [
+      [
+        "a",
+        "c"
+      ]
+    ]
+  },
+  "negative_first_result": {
+    "components": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "c"
+      ]
+    ],
+    "positive_forest": [
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "redundant_positive": [],
+    "rejected_positive": [
+      [
+        "b",
+        "c"
+      ]
+    ],
+    "active_negative": [
+      [
+        "a",
+        "c"
+      ]
+    ],
+    "ignored_negative": []
+  }
+}

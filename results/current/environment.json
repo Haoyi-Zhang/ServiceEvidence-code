@@ -1,0 +1,41 @@
+{
+  "container_or_virtualization": "none",
+  "context": "scientific-checks",
+  "cpu": {
+    "affinity_cpu_count": 2,
+    "affinity_cpu_ids": [
+      0,
+      1
+    ],
+    "cgroup_cpu_max": null,
+    "cgroup_cpuset": "0-1",
+    "logical_cores_visible": 2,
+    "model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
+  },
+  "memory": {
+    "cgroup_memory_max": null,
+    "host_visible_total_bytes": 8322924544,
+    "rlimit_address_space_hard": null,
+    "rlimit_address_space_soft": null
+  },
+  "os": {
+    "distribution": "Ubuntu 24.04.5 LTS",
+    "machine": "x86_64",
+    "release": "6.17.0-1022-azure",
+    "system": "Linux"
+  },
+  "persistence": {
+    "filesystem_type": "ext4",
+    "mount_options": "rw,relatime,discard,nobarrier,data=writeback",
+    "mount_source": "/dev/sda1",
+    "path_role": "artifact results directory",
+    "persistence_medium": "unknown"
+  },
+  "python": {
+    "executable_basename": "python",
+    "implementation": "CPython",
+    "version": "3.12.14"
+  },
+  "schema": 1,
+  "scope_note": "This record describes the execution that creates it. It does not retroactively identify hardware or software for retained historical timings."
+}

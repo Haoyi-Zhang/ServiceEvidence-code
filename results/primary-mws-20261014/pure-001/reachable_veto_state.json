@@ -1,0 +1,191 @@
+{
+  "state": {
+    "node_id": "triangle",
+    "sources": [
+      "s0",
+      "s1",
+      "s2"
+    ],
+    "threshold": 2,
+    "handles": [
+      "a",
+      "b",
+      "c"
+    ],
+    "stable_floors": [],
+    "cells": [
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "s0",
+        "vote": "same",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "s1",
+        "vote": "same",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "a",
+        "right": "b",
+        "epoch": 0,
+        "source": "s2",
+        "vote": "unknown",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "a",
+        "right": "c",
+        "epoch": 0,
+        "source": "s0",
+        "vote": "unknown",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "a",
+        "right": "c",
+        "epoch": 0,
+        "source": "s1",
+        "vote": "unknown",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "a",
+        "right": "c",
+        "epoch": 0,
+        "source": "s2",
+        "vote": "different",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "s0",
+        "vote": "same",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "s1",
+        "vote": "same",
+        "reason": "constructed conflicting triangle"
+      },
+      {
+        "left": "b",
+        "right": "c",
+        "epoch": 0,
+        "source": "s2",
+        "vote": "unknown",
+        "reason": "constructed conflicting triangle"
+      }
+    ]
+  },
+  "views": {
+    "relation=True;component=True": {
+      "components": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "c"
+        ]
+      ],
+      "accepted": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "rejected": [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "selected_negative": [
+        [
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "relation=True;component=False": {
+      "components": [
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "accepted": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rejected": [],
+      "selected_negative": [
+        [
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "relation=False;component=True": {
+      "components": [
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "accepted": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rejected": [],
+      "selected_negative": []
+    },
+    "relation=False;component=False": {
+      "components": [
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "accepted": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rejected": [],
+      "selected_negative": []
+    }
+  },
+  "assumption_scope": "A1/A2 admissible; conflicting positives need not satisfy A4 separability"
+}

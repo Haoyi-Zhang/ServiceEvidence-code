@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Reaggregate passive Mutex Watershed comparisons and check controls."""
 import csv
+import argparse
 import itertools
 import json
 import math
@@ -26,6 +27,10 @@ def near(a,b):
 
 
 def main():
+    global OUT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--out', type=Path, default=OUT)
+    OUT = parser.parse_args().out
     checks = json.loads((OUT/'checks.json').read_text(encoding='utf-8'))
     require(checks['exhaustive'] == dict(graphs=729,full_view_equal=729,
         component_off_changes=259,component_off_negative_violations=354),'finite graph counts')

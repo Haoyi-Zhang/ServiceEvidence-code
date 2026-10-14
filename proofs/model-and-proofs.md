@@ -366,3 +366,89 @@ stress campaign compares complete views and records its own environment and
 raw calls; `scripts/verify_mutex.py` reaggregates all medians and per-seed ratios.
 Neither finite checks nor Python timing comparisons establish global novelty,
 production deployment or an advantage over the authors' optimized image code.
+
+## 17. Executing a compatible diagnostic without changing other decisions
+
+Let P be the current canonical partition, N the selected negative set, and T the
+set of blocks on a simple globally compatible diagnostic path. Fix every old
+selected relation decision except the listed UNKNOWN relations, which become
+SAME in complete future vectors. Each new epoch must exceed every retained
+epoch of that relation, not just the selected sealed epoch. An unobserved direct
+fallback requires candidate admission. Assume enough capacity to admit these
+cells, no concurrent decision changes, and that all source positions repeat or
+change exactly as specified. These are hypothetical interventions; source truth
+and the willingness or ability of actual sources to make them are not proved.
+
+**Proposition.** Recomputing the same negative-first lexical materializer
+connects the query, preserves every old component and accepted positive edge,
+and preserves explicit-negative consistency. This does not optimize global
+identity accuracy, minimize arbitrary policies, or provide fresh information
+during a partition.
+
+**Proof.** Let K consist of the union of T and every other P block separately.
+Every K block is N-free: P is negative-safe, and global compatibility excludes
+all negative pairs between T blocks. Consider the lexical old positive sequence
+with the new path edges interleaved. Maintain two prefix invariants: the new
+partition refines K and coarsens the old partition after the same old-edge
+prefix. A new edge stays inside one K block, so it can be admitted safely. An
+old accepted edge stays inside its original P block, hence inside K, so it
+remains accepted. An old rejected edge has a crossing negative witness in the
+old prefix; prefix coarsening preserves that witness. Its endpoints cannot
+become internally connected because that would internalize the witness in a
+negative-free K block. It therefore stays rejected. Both invariants hold for
+singletons and after each step. In the final view every old block is preserved,
+all new path edges are accepted, and their connected chain joins the query.
+The ordinary negative guard preserves N throughout.
+
+The bounded execution experiment uses all 729 four-handle ternary graphs,
+three sources and q=2. It checks all 4,374 classifications and actually creates
+fresh complete vectors for each of the 643 ambiguity plans. Raw before/plan/
+after records preserve the input, supplied or changed positions and observed
+partition. This closes execution for this finite family rather than inferring
+execution from an optimum value. The prefix argument applies to the stated
+frozen-decision extension, not arbitrary future evidence streams.
+
+A second finite family admits absent relations as a fourth pair state, uses
+five sources and q=2, and enumerates all 4,096 graphs and 24,576 queries. It
+executes 7,862 plans (7,418 one-edge, 432 two-edge and 12 three-edge plans),
+adding 41,590 fresh cells with zero contract mismatches. Its raw plan records
+are in execution-002; they are not the earlier abstract 4,096 quotient oracle.
+Three named tests additionally check a three-edge plan, a selected epoch 0
+with an open epoch 9 requiring epoch 10, and old support/floor preservation.
+
+## 18. Closest-comparator cost and workflow boundary
+
+MWS Section 3.4 merges the smaller active-mutex-ID table into the larger table.
+The old local comparator selected a union-find parent by component vertex count
+and always updated its table from the other root. Vertex count does not order
+mutex-table sizes. The owned 25-node, 24-edge fixture first builds an eight-node
+component with no incident negatives, then joins a singleton with 16 incident
+negatives. The old code attempts 16 input insertions into an empty table. The
+corrected comparator swaps table ownership independently of the canonical
+union-find root and attempts zero input insertions in this final union. Table
+union and therefore the entire view are unchanged. This is a faithful baseline
+repair, not a new algorithm. Historical timing rows use the old cost policy and
+are not evidence for the corrected comparator's costs.
+
+Wolf et al.'s extended author paper, arXiv:1904.12654v2, Algorithm 2 already
+offers connect_all=True to retain redundant internal positives. Its Section 4
+derives a dominant-power multicut objective under distinct priorities. Neither
+support-edge retention nor the component veto is a contribution distinction.
+The plain replicated evidence log, complete-vector selection and read-time MWS
+combination is an ordinary same-semantic alternative; the present artifact's
+particular source-slot diagnosis and its execution premises are the specific
+object of study, not an established novelty claim.
+
+The native loopback comparison uses exactly the same source batches, three
+local owners, partial-query schedule, fair pulls, later negative epoch, floor
+reports/acknowledgements/compaction and independent certificate checks for
+scanning, indexed and corrected MWS read views. Every arm is explicitly
+volatile. The unchanged persistent Service is separately probed on Windows:
+content fsync and replace execute, then parent-directory fsync raises
+PermissionError, so no acknowledgement is issued. The volatile experiment is
+not a repair or validation of that durable contract. Its costs include actual
+TCP frames, complete updates and queries, checker time and floor protocol;
+snapshot bytes, fsyncs and durable commits are zero by definition. Durable
+same-semantic workflow cost, power-loss behavior and multi-machine timing
+remain unmeasured in this cohort. SQLite is only inventoried as a runtime
+version; it is not a persistence engine in this service.

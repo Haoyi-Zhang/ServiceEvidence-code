@@ -1,0 +1,56 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "sqlite": "3.53.1",
+  "sqlite_role": "runtime inventory only; this service does not use SQLite",
+  "clocks": {
+    "time": {
+      "implementation": "GetSystemTimeAsFileTime()",
+      "monotonic": false,
+      "adjustable": true,
+      "resolution": 0.015625
+    },
+    "monotonic": {
+      "implementation": "GetTickCount64()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 0.015625
+    },
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_time": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    }
+  },
+  "host": {
+    "cpu": {
+      "Name": "12th Gen Intel(R) Core(TM) i7-12700KF",
+      "NumberOfCores": 12,
+      "NumberOfLogicalProcessors": 20
+    },
+    "os": {
+      "Caption": "Microsoft Windows 11 \u4e13\u4e1a\u7248",
+      "Version": "10.0.28000",
+      "BuildNumber": "28000",
+      "OSArchitecture": "64 \u4f4d",
+      "TotalVisibleMemorySize": 33388720
+    },
+    "volume": {
+      "FileSystem": "NTFS",
+      "DriveType": 3
+    }
+  },
+  "affinity": "not pinned",
+  "allocation_limit": "unknown",
+  "virtualization": "unknown",
+  "persistence_medium": "unknown",
+  "scope": "this execution only; no historical environment attribution"
+}

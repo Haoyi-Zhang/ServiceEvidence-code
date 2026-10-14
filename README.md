@@ -44,9 +44,9 @@ The artifact uses Python's standard library and Bash. From this directory:
 ./scripts/reproduce_extended.sh
 ```
 
-`check_all.sh` discovers 82 unit and boundary tests: the retained 68-test family, including all 720 orders of the six-cell split history, strict parsing/common-floor regressions, globally compatible ambiguity regressions, public-extraction/predicate checks, atomic persistence failures, concurrent-ingest serialization, read-only acknowledgement, stale-temporary cleanup, cross-process hash-seed determinism, and 11 workload-bound, compaction-domain, executed-sealing-counter, and timing-reaggregation regressions; plus six pure checker-context and eight Mutex Watershed regressions. It also runs the public-input and 69-reference audits (including per-paper supported points, project deltas, and named source anchors), checks representative certificates in normal and optimized Python modes, verifies the retained result surfaces, evaluates 276 public target pairs, and checks the 30 equal-work rows, independent-process recovery summaries, 60 materializer cases, and 2,550 exact topology placements. The passive MWS campaign can be rerun separately using the commands below.
+`check_all.sh` discovers 86 unit and boundary tests: the retained 68-test family, including all 720 orders of the six-cell split history, strict parsing/common-floor regressions, globally compatible ambiguity regressions, public-extraction/predicate checks, atomic persistence failures, concurrent-ingest serialization, read-only acknowledgement, stale-temporary cleanup, cross-process hash-seed determinism, and 11 workload-bound, compaction-domain, executed-sealing-counter, and timing-reaggregation regressions; plus six pure checker-context, eight Mutex Watershed, one smaller-table-cost and three plan-execution regressions. It also runs the public-input and bibliography/source-binding checks (including per-paper supported points, project deltas, and named source anchors), checks representative certificates in normal and optimized Python modes, verifies the retained result surfaces, evaluates 276 public target pairs, and checks the 30 equal-work rows, independent-process recovery summaries, 60 materializer cases, and 2,550 exact topology placements. The passive MWS campaign can be rerun separately using the commands below.
 
-The six portable regressions compare complete certificates against an independent raw-cell/block/permutation oracle over 729 four-handle ternary graphs, partial vectors and named boundary fixtures. They reject certificate/schema mutations and count checker-owned reconstruction calls without timing. Run only this pure subset with `PYTHONPATH=src python -B -m unittest discover -s tests -p test_checker_context.py -v`. It starts no services or campaigns. Discovery of 82 tests does not extend the retained 68-test Linux receipt to an unexecuted full run.
+The six portable regressions compare complete certificates against an independent raw-cell/block/permutation oracle over 729 four-handle ternary graphs, partial vectors and named boundary fixtures. They reject certificate/schema mutations and count checker-owned reconstruction calls without timing. Run only this pure subset with `PYTHONPATH=src python -B -m unittest discover -s tests -p test_checker_context.py -v`. It starts no services or campaigns. Discovery of 86 tests does not extend the retained 68-test Linux receipt to an unexecuted full run.
 
 The retained Linux run in `results/current/` passes all 68 tests without skips. It also completes 30 equal-work cases, three owned process-recovery cases with six restarted processes, 60 materializer cases with 300 paired repetitions, and 12,750 topology query checks. Five 100-service loopback cases take 3.71–4.07 seconds and 62.79–63.27 MiB peak RSS. Public adapter inputs are passive replay fixtures, not external-service experiments. Large raw JSON outputs in this directory use `.json.gz`; `gzip` or Python's standard-library `gzip.open` restores their exact bytes. Historical results and tables retain their own execution context.
 
@@ -140,8 +140,8 @@ with the scanning/indexed implementations and same-priority MWS comparator.
 
 ```sh
 PYTHONPATH=src python -B -m unittest discover -s tests -p test_mutex_baseline.py -v
-PYTHONPATH=src python -B experiments/mutex_campaign.py --out results/mutex
-python -B scripts/verify_mutex.py
+PYTHONPATH=src python -B experiments/mutex_campaign.py --out results/mutex-recomputed
+python -B scripts/verify_mutex.py --out results/mutex-recomputed
 ```
 
 `results/mutex/` contains the passive witness state and weighted-priority
@@ -157,8 +157,7 @@ authors' optimized image implementation or a Web/deployment benchmark. They
 are not pooled with older Linux timings. Eight additional tests cover 125
 three-node weighted graphs, 200 eight-node seeded graphs against an explicit
 block oracle, partial epochs/floors, signed parallel edges, redundant positives,
-closure and input boundaries. The newly executed targeted subsets do not
-constitute a full 82-test run.
+closure and input boundaries. The targeted subsets do not constitute a full discovery run.
 
 All seven event-loop peer-service cases converge in one fair repair round after three faulted rounds. Representative generated queries change from ambiguous during the partition to same after healing. Missing acknowledgements and malformed batches are rejected; floor propagation, stale-state suppression, compaction, and orderly restart preserve the checked state. The five 2,200-cell cases use 191–200 request/response exchanges.
 
@@ -196,3 +195,20 @@ All cited historical timing runs predate environment capture. CPU model and core
 The main and supplemental numeric assets can be reproduced by
 `python scripts/render_tpds_assets.py --output /path/to/table-directory`.
 The path is explicit so this repository does not depend on a manuscript tree.
+
+## Smaller-table comparator and executable plans
+
+`results/primary-mws-20261014/README.md` documents the separate corrected-MWS
+cohort, the actual future-vector execution check and the same-information
+native volatile-loopback comparison. It preserves historical rows and labels,
+raw input states, all emitted frames, phase costs and the failed native durable
+probe. The smaller-table repair implements the prior MWS Section 3.4 cost
+policy; it is not a new clustering algorithm. The plan-execution proof requires
+a frozen decision set, sufficiently new epochs, admitted candidates, complete
+cooperative source vectors and sufficient capacity. Neither these counts nor
+the same-semantic log-plus-MWS alternative establish novelty priority.
+The scientific workflow's focused job runs the three MWS/materializer test
+modules and replays both retained corrected pure and complete workflow cohorts
+on pushes, pull requests and manual dispatch. Its larger fresh-campaign job
+runs only on main-branch pushes or manual dispatch; the focused replay does not
+create a new timing cohort.

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import itertools
 import json
 import platform
@@ -61,6 +62,7 @@ def factorial_rows(r, family, seed, truth=None):
 
 
 def run(out):
+    require(not out.exists(), 'fresh output directory required; retained cohorts must not be overwritten')
     start = time.monotonic()
     def bounded():
         require(time.monotonic() - start < 180, '180-second campaign cap exceeded')
@@ -131,6 +133,10 @@ def run(out):
         family_cases = []
         for seed in SEEDS:
             r = instance(family,n,seed)
+            inputs = out/'inputs'
+            inputs.mkdir(exist_ok=True)
+            with gzip.open(inputs/f'{family}-{n}-{seed}.json.gz','wt',encoding='utf-8') as stream:
+                json.dump(r.export_state(),stream,sort_keys=True)
             functions = dict(scanning=r.materialize_reference, indexed=r.materialize,
                              mws_edge_ids=lambda: priority_preserving_mws(r))
             reference = r.materialize()

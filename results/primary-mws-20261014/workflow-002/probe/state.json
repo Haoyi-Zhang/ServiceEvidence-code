@@ -1,0 +1,1 @@
+{"cells":[{"epoch":0,"left":"a","reason":"owned native boundary","right":"b","source":"s","vote":"same"}],"handles":["a","b"],"node_id":"probe","sources":["s"],"stable_floors":[],"threshold":1}

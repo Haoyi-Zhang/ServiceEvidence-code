@@ -1,0 +1,5 @@
+family,seed,relation_veto,component_veto,handles,selected_positive,selected_negative,components,rejected,original_negative_violations,view_equal_to_cie
+conflicting_triangle,0,True,True,3,2,1,2,1,0,True
+conflicting_triangle,0,True,False,3,2,1,1,0,1,False
+conflicting_triangle,0,False,True,3,2,0,1,0,1,False
+conflicting_triangle,0,False,False,3,2,0,1,0,1,False

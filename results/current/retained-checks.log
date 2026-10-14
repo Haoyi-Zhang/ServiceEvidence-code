@@ -1,0 +1,88 @@
+test_direct_cell_types_are_strict (test_boundaries.BoundaryTests.test_direct_cell_types_are_strict) ... ok
+test_disjoint_latest_epochs_are_not_a_common_floor (test_boundaries.BoundaryTests.test_disjoint_latest_epochs_are_not_a_common_floor) ... ok
+test_empty_and_mismatched_registries (test_boundaries.BoundaryTests.test_empty_and_mismatched_registries) ... ok
+test_failed_equivocating_join_does_not_add_handles (test_boundaries.BoundaryTests.test_failed_equivocating_join_does_not_add_handles) ... ok
+test_failed_handle_batch_is_atomic (test_boundaries.BoundaryTests.test_failed_handle_batch_is_atomic) ... ok
+test_holes_retain_the_greatest_actually_common_epoch (test_boundaries.BoundaryTests.test_holes_retain_the_greatest_actually_common_epoch) ... ok
+test_import_rejects_coercions_duplicates_and_unregistered_handles (test_boundaries.BoundaryTests.test_import_rejects_coercions_duplicates_and_unregistered_handles) ... ok
+test_state_view_and_certificate_ignore_hash_seed (test_determinism.CrossProcessDeterminismTests.test_state_view_and_certificate_ignore_hash_seed) ... ok
+test_persisted_query_work_is_counted_and_recoverable (test_equal_work.EqualWorkPersistenceTests.test_persisted_query_work_is_counted_and_recoverable) ... ok
+test_all_small_delivery_orders_converge (test_exhaustive.ExhaustiveScheduleTests.test_all_small_delivery_orders_converge) ... ok
+test_all_four_handle_ternary_graphs (test_indexed_materializer.IndexedMaterializerTests.test_all_four_handle_ternary_graphs) ... ok
+test_compaction_and_stale_join (test_indexed_materializer.IndexedMaterializerTests.test_compaction_and_stale_join) ... ok
+test_empty_and_additional_handles (test_indexed_materializer.IndexedMaterializerTests.test_empty_and_additional_handles) ... ok
+test_random_multi_epoch_partial_states (test_indexed_materializer.IndexedMaterializerTests.test_random_multi_epoch_partial_states) ... ok
+test_ambiguity_diagnostic_for_observed_unknown_relation (test_model.ModelTests.test_ambiguity_diagnostic_for_observed_unknown_relation) ... ok
+test_ambiguity_diagnostic_for_unobserved_query_relation (test_model.ModelTests.test_ambiguity_diagnostic_for_unobserved_query_relation) ... ok
+test_certificate_rejects_unregistered_query_handle (test_model.ModelTests.test_certificate_rejects_unregistered_query_handle) ... ok
+test_checker_rejects_ambiguous_label_when_negative_separator_exists (test_model.ModelTests.test_checker_rejects_ambiguous_label_when_negative_separator_exists) ... ok
+test_checker_rejects_duplicate_and_equivocating_state_keys (test_model.ModelTests.test_checker_rejects_duplicate_and_equivocating_state_keys) ... ok
+test_checker_rejects_locally_short_but_globally_incompatible_path (test_model.ModelTests.test_checker_rejects_locally_short_but_globally_incompatible_path) ... ok
+test_checker_rejects_tampering_even_with_python_optimized (test_model.ModelTests.test_checker_rejects_tampering_even_with_python_optimized) ... ok
+test_compaction_floor_prevents_history_resurrection (test_model.ModelTests.test_compaction_floor_prevents_history_resurrection) ... ok
+test_compaction_preserves_view (test_model.ModelTests.test_compaction_preserves_view) ... ok
+test_compaction_refuses_excess_pending_epochs_without_mutation (test_model.ModelTests.test_compaction_refuses_excess_pending_epochs_without_mutation) ... ok
+test_compaction_refuses_floor_regression_without_mutation (test_model.ModelTests.test_compaction_refuses_floor_regression_without_mutation) ... ok
+test_compaction_rejects_unsealed_floor (test_model.ModelTests.test_compaction_rejects_unsealed_floor) ... ok
+test_compaction_retains_newer_pending_epoch (test_model.ModelTests.test_compaction_retains_newer_pending_epoch) ... ok
+test_compaction_without_acknowledged_floor_keeps_every_cell (test_model.ModelTests.test_compaction_without_acknowledged_floor_keeps_every_cell) ... ok
+test_equivocation_rejected (test_model.ModelTests.test_equivocation_rejected) ... ok
+test_export_import_preserves_handles_floor_and_view (test_model.ModelTests.test_export_import_preserves_handles_floor_and_view) ... ok
+test_fault_emulator_converges (test_model.ModelTests.test_fault_emulator_converges) ... ok
+test_floor_aware_join_commutative_associative_idempotent (test_model.ModelTests.test_floor_aware_join_commutative_associative_idempotent) ... ok
+test_global_ambiguity_avoids_internal_negative_separator (test_model.ModelTests.test_global_ambiguity_avoids_internal_negative_separator) ... ok
+test_global_ambiguity_prefers_safe_observed_path (test_model.ModelTests.test_global_ambiguity_prefers_safe_observed_path) ... ok
+test_independent_checker_for_all_certificate_kinds_and_optimized_mode (test_model.ModelTests.test_independent_checker_for_all_certificate_kinds_and_optimized_mode) ... ok
+test_join_commutative_associative_idempotent (test_model.ModelTests.test_join_commutative_associative_idempotent) ... ok
+test_negative_safe_partition (test_model.ModelTests.test_negative_safe_partition) ... ok
+test_negative_veto_and_split (test_model.ModelTests.test_negative_veto_and_split) ... ok
+test_sealed_epoch_required (test_model.ModelTests.test_sealed_epoch_required) ... ok
+test_unsealed_authorization_gap_counts_closure_slots (test_model.ModelTests.test_unsealed_authorization_gap_counts_closure_slots) ... ok
+test_conservative_predicate_abstains_without_supported_error (test_public_benchmark.PublicTargetBenchmarkTests.test_conservative_predicate_abstains_without_supported_error) ... ok
+test_endpoint_only_control_exposes_both_error_types (test_public_benchmark.PublicTargetBenchmarkTests.test_endpoint_only_control_exposes_both_error_types) ... ok
+test_frozen_dimensions_and_vantage_pairs (test_public_benchmark.PublicTargetBenchmarkTests.test_frozen_dimensions_and_vantage_pairs) ... ok
+test_minimized_extraction_does_not_infer_missing_side_fields (test_public_benchmark.PublicTargetBenchmarkTests.test_minimized_extraction_does_not_infer_missing_side_fields) ... ok
+test_predicate_does_not_use_target_label (test_public_benchmark.PublicTargetBenchmarkTests.test_predicate_does_not_use_target_label) ... ok
+test_wilson_interval_is_bounded (test_public_benchmark.PublicTargetBenchmarkTests.test_wilson_interval_is_bounded) ... ok
+test_integer_floor_and_no_floor_sentinel_roundtrip (test_scientific_repairs.CompactionDomainTests.test_integer_floor_and_no_floor_sentinel_roundtrip) ... ok
+test_noninteger_floors_cannot_corrupt_exported_state (test_scientific_repairs.CompactionDomainTests.test_noninteger_floors_cannot_corrupt_exported_state) ... ok
+test_pending_allowance_requires_integer_counts (test_scientific_repairs.CompactionDomainTests.test_pending_allowance_requires_integer_counts) ... ok
+test_incorrect_current_aggregation_and_scientific_predicates_still_fail (test_scientific_repairs.EqualWorkTimingTests.test_incorrect_current_aggregation_and_scientific_predicates_still_fail) ... ok
+test_new_environment_timings_reaggregate_without_historical_gate (test_scientific_repairs.EqualWorkTimingTests.test_new_environment_timings_reaggregate_without_historical_gate) ... ok
+test_counter_observes_a_changed_model_instead_of_assuming_zero (test_scientific_repairs.SealingMeasurementTests.test_counter_observes_a_changed_model_instead_of_assuming_zero) ... ok
+test_every_small_conflicting_schedule_runs_both_rules (test_scientific_repairs.SealingMeasurementTests.test_every_small_conflicting_schedule_runs_both_rules) ... ok
+test_caps_require_integer_counts (test_scientific_repairs.WorkloadBoundTests.test_caps_require_integer_counts) ... ok
+test_feasible_small_caps_are_respected_and_maximal (test_scientific_repairs.WorkloadBoundTests.test_feasible_small_caps_are_respected_and_maximal) ... ok
+test_infeasible_caps_are_rejected (test_scientific_repairs.WorkloadBoundTests.test_infeasible_caps_are_rejected) ... ok
+test_zero_collision_control_has_only_within_service_edges (test_scientific_repairs.WorkloadBoundTests.test_zero_collision_control_has_only_within_service_edges) ... ok
+test_acknowledgement_is_read_only (test_service_durability.ServiceDurabilityTests.test_acknowledgement_is_read_only) ... ok
+test_concurrent_ingests_serialize_without_lost_update (test_service_durability.ServiceDurabilityTests.test_concurrent_ingests_serialize_without_lost_update) ... ok
+test_directory_fsync_failure_has_idempotent_ambiguous_outcome (test_service_durability.ServiceDurabilityTests.test_directory_fsync_failure_has_idempotent_ambiguous_outcome) ... ok
+test_replace_failure_preserves_memory_and_previous_snapshot (test_service_durability.ServiceDurabilityTests.test_replace_failure_preserves_memory_and_previous_snapshot) ... ok
+test_rpc_does_not_hang_when_peer_close_never_completes (test_service_durability.ServiceDurabilityTests.test_rpc_does_not_hang_when_peer_close_never_completes) ... ok
+test_unacknowledged_pending_file_is_discarded_on_restart (test_service_durability.ServiceDurabilityTests.test_unacknowledged_pending_file_is_discarded_on_restart) ... ok
+test_bell_counts (test_topology.TopologyTests.test_bell_counts) ... ok
+test_majority_and_central_can_reverse (test_topology.TopologyTests.test_majority_and_central_can_reverse) ... ok
+test_singletons_no_quorum (test_topology.TopologyTests.test_singletons_no_quorum) ... ok
+test_admitted_large_state_uses_verifiable_key_references (test_transport_budget.TransportBudgetTests.test_admitted_large_state_uses_verifiable_key_references) ... ok
+test_uncompactable_query_returns_explicit_error_over_socket (test_transport_budget.TransportBudgetTests.test_uncompactable_query_returns_explicit_error_over_socket) ... ok
+
+----------------------------------------------------------------------
+Ran 68 tests in 4.437s
+
+OK
+PASS: 16 inspected upstream fixture files; 12 unique records retained; 11 normalized targets; 12 field mappings; missingness boundaries preserved
+PASS: 68 unique cited references; 55 unique DOIs; BibTeX/citation/calibration sets equal in full and standalone layouts; per-paper roles and source anchors present; no nocite or duplicate title/identifier
+PASS: 6 observations across 3 archived navigations
+{"countries": 10, "excluded_upstream_fixtures": 4, "inspected_upstream_fixtures": 16, "label_scope": "exact normalized input-target equality; not service ownership or operator identity", "leave_one_case_out": {"asserted_error_rate_range": [0.0, 0.0], "coverage_range": [0.04329004329004329, 0.08658008658008658], "false_different_range": [0, 0], "false_same_range": [0, 0], "folds": 12}, "leave_one_target_out": {"asserted_error_rate_range": [0.0, 0.0], "coverage_range": [0.04329004329004329, 0.09473684210526316], "false_different_range": [0, 0], "false_same_range": [0, 0], "folds": 11}, "observations": 24, "pair_labels": {"different": 260, "same": 16}, "predicates": [{"asserted_error_rate": 0.0, "coverage": 0.07246376811594203, "different_precision": 1.0, "different_recall": 0.06538461538461539, "false_different": 0, "false_same": 0, "pairs": 276, "predicate": "conservative-two-signal", "predicted_different": 17, "predicted_same": 3, "predicted_unknown": 256, "same_precision": 1.0, "same_recall": 0.1875, "true_different": 260, "true_same": 16}, {"asserted_error_rate": 0.03260869565217391, "coverage": 1.0, "different_precision": 0.9735849056603774, "different_recall": 0.9923076923076923, "false_different": 7, "false_same": 2, "pairs": 276, "predicate": "closed-world-endpoint-negative-control", "predicted_different": 265, "predicted_same": 11, "predicted_unknown": 0, "same_precision": 0.8181818181818182, "same_recall": 0.5625, "true_different": 260, "true_same": 16}], "probe_asns": 10, "records": 12, "sampling_scope": "frozen set of 16 inspected upstream Web Connectivity fixture candidates; 12 unique extractable records retained after identity deduplication; not a representative Web sample", "targets": 11, "uncertainty_scope": "no independent-pair confidence intervals: pairs share observations and the fixtures are not a probability sample; target-block and case-block leave-one-out ranges are finite-family sensitivity checks, not population confidence intervals"}
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS: 105 correctness rows; 25 fault trials; 40,000 sealing schedules; 207 certificates; three compaction depths; five scale cases; 276 public target pairs; 30 equal-work rows; process-crash surface verified separately
+PASS: 30 equal-work rows independently aggregated; 135 state-coupled certificates; current-record medians 0.239787035/1.16288923/2.5533233 s
+PASS: 3 independent-process cases; 6 abrupt restarts; 6 retained state-coupled certificates
+PASS: timing environment inventory is complete; historical unknowns remain explicit; future capture schema validated
+PASS: final-current and retained-clean raw timings independently reaggregated; the 3.03-fold primary execution is explicitly summary-only; 2550 topology placements checked
