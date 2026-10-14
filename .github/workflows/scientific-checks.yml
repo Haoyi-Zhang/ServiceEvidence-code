@@ -29,6 +29,7 @@ jobs:
           python -B -m unittest discover -s tests -p test_mutex_baseline.py -v
           python -B -m unittest discover -s tests -p test_mutex_merge_cost.py -v
           python -B -m unittest discover -s tests -p test_indexed_materializer.py -v
+          python -B -m unittest discover -s tests -p test_mutex_output_contract.py -v
           python -B scripts/verify_mutex.py --out results/primary-mws-20261014/pure-003
           python -B scripts/verify_workflow_mws.py --root results/primary-mws-20261014
   bounded-science:
@@ -54,6 +55,16 @@ jobs:
           cp -a results/. .scientific-results/retained/
           python -B scripts/capture_environment.py --output .scientific-results/environment.json --context scientific-checks --storage-path .scientific-results
           touch .scientific-results/run-start
+      - name: Reserve fresh mutex output path
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/p024-mutex-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          if [[ -e "$out" ]]; then
+            echo "fresh mutex output path already exists" >&2
+            exit 1
+          fi
+          printf 'MUTEX_OUT=%s\n' "$out" >> "$GITHUB_ENV"
       - name: Unit tests and retained-data gates
         shell: bash
         run: |
@@ -76,8 +87,8 @@ jobs:
           timeout 180s python -B experiments/socket_campaign.py --public 2>&1 | tee .scientific-results/socket-passive-fixture.log
           timeout 360s python -B experiments/equal_work_campaign.py 2>&1 | tee .scientific-results/equal-work.log
           timeout 180s python -B experiments/process_crash_campaign.py 2>&1 | tee .scientific-results/process-crash.log
-          timeout 180s python -B experiments/mutex_campaign.py 2>&1 | tee .scientific-results/mutex.log
-          timeout 60s python -B scripts/verify_mutex.py 2>&1 | tee .scientific-results/mutex-verification.log
+          timeout 180s python -B experiments/mutex_campaign.py --out "$MUTEX_OUT" 2>&1 | tee .scientific-results/mutex.log
+          timeout 60s python -B scripts/verify_mutex.py --out "$MUTEX_OUT" 2>&1 | tee .scientific-results/mutex-verification.log
           timeout 60s python -B scripts/verify_equal_work.py 2>&1 | tee .scientific-results/equal-work-verification.log
           timeout 60s python -B scripts/verify_process_crash.py 2>&1 | tee .scientific-results/process-crash-verification.log
           python -B - <<'PY'
@@ -98,6 +109,10 @@ jobs:
           mkdir -p .scientific-results/run-outputs
           if [[ -f .scientific-results/run-start ]]; then
             find results -type f -newer .scientific-results/run-start -exec cp --parents '{}' .scientific-results/run-outputs/ \;
+          fi
+          if [[ -n "${MUTEX_OUT:-}" && -d "$MUTEX_OUT" ]]; then
+            mkdir -p .scientific-results/run-outputs/fresh-mutex
+            cp -a "$MUTEX_OUT/." .scientific-results/run-outputs/fresh-mutex/
           fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
