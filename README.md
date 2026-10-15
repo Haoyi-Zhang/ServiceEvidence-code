@@ -36,17 +36,38 @@ The evaluated two-signal predicate never reads the target label. It returns SAME
 
 ## Reproduction
 
-The artifact uses Python's standard library and Bash. From this directory:
+Complete reproduction targets Linux with Bash and Python 3.12, matching the
+Ubuntu 24.04/Python 3.12 CI configuration. It uses only Python's standard
+library; no package installation, network fetch or upstream execution is needed.
+The campaigns use POSIX `resource`, process signals and parent-directory fsync.
+Native Windows supports the portable tests and passive replayers below, but
+not the complete durable-service reproduction (see the retained Windows probe
+in `results/primary-mws-20261014/README.md`).
+
+Run from this artifact directory in a disposable copy. The commands regenerate
+files under `results/`, including environment records, and consume the packaged
+passive CSV inputs under `external_inputs/`. Keep the original retained results
+separate:
 
 ```sh
-./scripts/check_all.sh
-./scripts/reproduce.sh
-./scripts/reproduce_extended.sh
+bash scripts/check_all.sh
+bash scripts/reproduce.sh
+bash scripts/reproduce_extended.sh
 ```
 
-`check_all.sh` discovers 86 unit and boundary tests: the retained 68-test family, including all 720 orders of the six-cell split history, strict parsing/common-floor regressions, globally compatible ambiguity regressions, public-extraction/predicate checks, atomic persistence failures, concurrent-ingest serialization, read-only acknowledgement, stale-temporary cleanup, cross-process hash-seed determinism, and 11 workload-bound, compaction-domain, executed-sealing-counter, and timing-reaggregation regressions; plus six pure checker-context, eight Mutex Watershed, one smaller-table-cost and three plan-execution regressions. It also runs the public-input and bibliography/source-binding checks (including per-paper supported points, project deltas, and named source anchors), checks representative certificates in normal and optimized Python modes, verifies the retained result surfaces, evaluates 276 public target pairs, and checks the 30 equal-work rows, independent-process recovery summaries, 60 materializer cases, and 2,550 exact topology placements. The passive MWS campaign can be rerun separately using the commands below.
+`check_all.sh` discovers 89 unit and boundary tests: the retained 68-test family, including all 720 orders of the six-cell split history, strict parsing/common-floor regressions, globally compatible ambiguity regressions, public-extraction/predicate checks, atomic persistence failures, concurrent-ingest serialization, read-only acknowledgement, stale-temporary cleanup, cross-process hash-seed determinism, and 11 workload-bound, compaction-domain, executed-sealing-counter, and timing-reaggregation regressions; plus six pure checker-context, eight Mutex Watershed, one smaller-table-cost, three plan-execution and three CI output-contract regressions. It also runs the public-input and bibliography/source-binding checks (including per-paper supported points, project deltas, and named source anchors), checks representative certificates in normal and optimized Python modes, verifies the retained result surfaces, evaluates 276 public target pairs, and checks the 30 equal-work rows, independent-process recovery summaries, 60 materializer cases, and 2,550 exact topology placements. The passive MWS campaign can be rerun separately using the commands below.
 
-The six portable regressions compare complete certificates against an independent raw-cell/block/permutation oracle over 729 four-handle ternary graphs, partial vectors and named boundary fixtures. They reject certificate/schema mutations and count checker-owned reconstruction calls without timing. Run only this pure subset with `PYTHONPATH=src python -B -m unittest discover -s tests -p test_checker_context.py -v`. It starts no services or campaigns. Discovery of 86 tests does not extend the retained 68-test Linux receipt to an unexecuted full run.
+The six portable regressions compare complete certificates against an independent raw-cell/block/permutation oracle over 729 four-handle ternary graphs, partial vectors and named boundary fixtures. They reject certificate/schema mutations and count checker-owned reconstruction calls without timing. Run only this pure subset with `PYTHONPATH=src python -B -m unittest discover -s tests -p test_checker_context.py -v`. It starts no services or campaigns. Discovery of 89 tests does not extend the retained 68-test Linux receipt to an unexecuted full run.
+
+For the same portable subset in Windows PowerShell:
+
+```powershell
+$env:PYTHONPATH = (Join-Path (Get-Location) 'src')
+$env:PYTHONDONTWRITEBYTECODE = '1'
+python -B -m unittest discover -s tests -p test_checker_context.py -v
+python -B scripts/verify_mutex.py --out results/primary-mws-20261014/pure-003
+python -B scripts/verify_workflow_mws.py --root results/primary-mws-20261014
+```
 
 The retained Linux run in `results/current/` passes all 68 tests without skips. It also completes 30 equal-work cases, three owned process-recovery cases with six restarted processes, 60 materializer cases with 300 paired repetitions, and 12,750 topology query checks. Five 100-service loopback cases take 3.71–4.07 seconds and 62.79–63.27 MiB peak RSS. Public adapter inputs are passive replay fixtures, not external-service experiments. Large raw JSON outputs in this directory use `.json.gz`; `gzip` or Python's standard-library `gzip.open` restores their exact bytes. Historical results and tables retain their own execution context.
 
@@ -207,7 +228,7 @@ policy; it is not a new clustering algorithm. The plan-execution proof requires
 a frozen decision set, sufficiently new epochs, admitted candidates, complete
 cooperative source vectors and sufficient capacity. Neither these counts nor
 the same-semantic log-plus-MWS alternative establish novelty priority.
-The scientific workflow's focused job runs the three MWS/materializer test
+The scientific workflow's focused job runs the four MWS/materializer/output-contract test
 modules and replays both retained corrected pure and complete workflow cohorts
 on pushes, pull requests and manual dispatch. Its larger fresh-campaign job
 runs only on main-branch pushes or manual dispatch; the focused replay does not
